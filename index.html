@@ -109,12 +109,12 @@
         <div class="text-[11px] mono tracking-wider uppercase opacity-100">May 2026 · v01</div>
       </div>
     </div>
-    <nav class="hidden md:flex items-center gap-7 text-sm font-medium">
-      <a href="#winner" class="hover:text-[color:var(--orange)]">Winner</a>
+        <nav class="hidden md:flex items-center gap-7 text-sm font-medium">
+      <a href="#board" class="hover:text-[color:var(--orange)]">Quota</a>
+      <a href="#voices" class="hover:text-[color:var(--orange)]">Voices</a>
+      <a href="#roll" class="hover:text-[color:var(--orange)]">Honour Roll</a>
       <a href="#bus" class="hover:text-[color:var(--orange)]">BU Champions</a>
-      <a href="#voices" class="hover:text-[color:var(--orange)]">User Voices</a>
-      <a href="#roll" class="hover:text-[color:var(--orange)]">Roll Call</a>
-      <a href="#board" class="hover:text-[color:var(--orange)]">Quota Board</a>
+      <a href="#winner" class="hover:text-[color:var(--orange)]">Overall Winner</a>
     </nav>
     <div class="hidden md:flex items-center gap-3 text-xs mono uppercase tracking-wider">
       <span class="w-2 h-2 rounded-full bg-orange inline-block animate-pulse"></span>
@@ -133,7 +133,7 @@
     <div class="flex items-center gap-3 mb-8">
       <span class="tag bg-paper"><span class="w-1.5 h-1.5 rounded-full bg-[color:var(--orange)]"></span>Live · Cycle 03 results</span>
       <span class="tag bg-paper">47 transcripts · 22 submitters</span>
-      <span class="tag bg-paper">5 business units</span>
+      <span class="tag bg-paper">4 business units</span>
     </div>
 
     <h1 class="serif font-black tracking-tight leading-[0.92] text-[clamp(56px,9vw,148px)]">
@@ -163,7 +163,7 @@
           <div class="text-[11px] mono uppercase tracking-wider opacity-100 mt-1">Great quality</div>
         </div>
         <div class="chunk-sm bg-orange text-white p-4">
-          <div class="serif font-black text-4xl num">13</div>
+          <div class="serif font-black text-4xl num">7</div>
           <div class="text-[11px] mono uppercase tracking-wider mt-1 opacity-100">No-shows</div>
         </div>
       </div>
@@ -213,6 +213,394 @@
         <div class="serif font-bold text-xl mb-2">Receipts beat opinions.</div>
         <p class="text-sm leading-relaxed">Verbatim transcripts. Named users. Time-stamped calls. If you didn't hear it from a real person, you didn't find it.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ METHODOLOGY ============ -->
+<section class="bg-cream border-t-2 border-ink">
+  <div class="max-w-[1280px] mx-auto px-6 py-16">
+    <details open class="chunk p-8 bg-paper">
+      <summary class="flex items-center justify-between">
+        <div>
+          <div class="kicker text-[color:var(--orange)]">Methodology · footnote</div>
+          <h3 class="serif font-black text-3xl mt-1">How we scored everything.</h3>
+        </div>
+        <span class="serif text-3xl">↓</span>
+      </summary>
+      <div class="grid md:grid-cols-2 gap-6 mt-8 text-sm leading-relaxed">
+        <div>
+          <div class="font-bold mb-2">Interview count = conversations, not files.</div>
+          <p class="opacity-100">Param's 1 PDF with 8 user profiles counted as 8 interviews. Ashwin's 1 deck with 14 sessions = 9 verified for ranking. Anuj's 4 PDFs = 4. Same method, regardless of how the submission was packaged.</p>
+        </div>
+        <div>
+          <div class="font-bold mb-2">Quality bar (primary).</div>
+          <p class="opacity-100">Surprising or non-obvious findings that change product thinking <em>plus</em> depth of conversation. We reward specificity over volume — but volume is the floor.</p>
+        </div>
+        <div>
+          <div class="font-bold mb-2">Lip-service flag.</div>
+          <p class="opacity-100">Generic insights that could apply to any product — no specificity to Leap, GeeBee, Yocket, Test Prep, or the actual user being interviewed — get demoted regardless of count.</p>
+        </div>
+        <div>
+          <div class="font-bold mb-2">Mis-attributions, dedup, over-quota.</div>
+          <p class="opacity-100">The "Patel" and "Rama" transcripts → Vijay Chauhan (the speaker). "Asish" file → Ashis Kumar Lenka. Duplicate hash-identical PDFs counted once. Over-quota credit honoured fully (Sehaj 10, Ashwin 9).</p>
+        </div>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- ============ QUOTA BOARD ============ -->
+<section id="board" class="bg-paper border-t-2 border-ink relative">
+  <div class="max-w-[1280px] mx-auto px-6 py-20">
+    <div class="flex items-end justify-between mb-10 flex-wrap gap-4">
+      <div>
+        <div class="kicker text-[color:var(--orange)]">The full standings</div>
+        <h2 class="serif font-black text-5xl md:text-6xl mt-2 leading-none">Quota board.</h2>
+        <p class="mt-3 max-w-2xl opacity-100">29 names on the roster. 22 submitted. 7 didn't show up. The board is the board — sorted by status, then quota.</p>
+      </div>
+      <div class="flex flex-wrap items-center gap-5 text-xs font-semibold">
+        <span class="flex items-center gap-2"><span class="swatch" style="background:var(--lime);"></span>Exceeded</span>
+        <span class="flex items-center gap-2"><span class="swatch" style="background:#E7E1FE;"></span>Met</span>
+        <span class="flex items-center gap-2"><span class="swatch" style="background:#FFD9C8;"></span>Missed</span>
+        <span class="flex items-center gap-2"><span class="swatch" style="background:#1B1340;"></span>No submission</span>
+      </div>
+    </div>
+
+    <div class="chunk bg-paper overflow-hidden">
+      <div class="grid grid-cols-12 px-6 py-4 bg-ink text-[color:var(--paper)] text-[11px] mono uppercase tracking-wider">
+        <div class="col-span-4">Name</div>
+        <div class="col-span-3">BU</div>
+        <div class="col-span-2 text-right">Quota</div>
+        <div class="col-span-1 text-right">Done</div>
+        <div class="col-span-2 text-right">Status</div>
+      </div>
+
+      <!-- rows -->
+      <!-- EXCEEDED -->
+      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Anuj Garg</div><div class="col-span-3 text-base font-medium">GeeBee</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">4</div><div class="col-span-2 text-right"><span class="tag pill-pass">Exceeded</span></div></div>
+      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Ashwin Susarla 🏆</div><div class="col-span-3 text-base font-medium">Founder's Office</div><div class="col-span-2 text-right num">8</div><div class="col-span-1 text-right num font-bold">9</div><div class="col-span-2 text-right"><span class="tag pill-pass">Exceeded</span></div></div>
+      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Sehaj Bajaj</div><div class="col-span-3 text-base font-medium">Founder's Office</div><div class="col-span-2 text-right num">8</div><div class="col-span-1 text-right num font-bold">10</div><div class="col-span-2 text-right"><span class="tag pill-pass">Exceeded</span></div></div>
+      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Abhishek M</div><div class="col-span-3 text-base font-medium">Founder's Office</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">4</div><div class="col-span-2 text-right"><span class="tag pill-pass">Exceeded</span></div></div>
+      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Anirudh Amudan</div><div class="col-span-3 text-base font-medium">LeapScholar</div><div class="col-span-2 text-right num">8</div><div class="col-span-1 text-right num font-bold">9</div><div class="col-span-2 text-right"><span class="tag pill-pass">Exceeded</span></div></div>
+
+      <!-- MET -->
+      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Ashita Jain 🏆</div><div class="col-span-3 text-base font-medium">GeeBee</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">3</div><div class="col-span-2 text-right"><span class="tag pill-met">Met</span></div></div>
+      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Aratrika Roy</div><div class="col-span-3 text-base font-medium">GeeBee</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">3</div><div class="col-span-2 text-right"><span class="tag pill-met">Met</span></div></div>
+      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Param Thakkar 🥈</div><div class="col-span-3 text-base font-medium">Founder's Office</div><div class="col-span-2 text-right num">8</div><div class="col-span-1 text-right num font-bold">8</div><div class="col-span-2 text-right"><span class="tag pill-met">Met</span></div></div>
+      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Shiksha Mishra</div><div class="col-span-3 text-base font-medium">Founder's Office</div><div class="col-span-2 text-right num">8</div><div class="col-span-1 text-right num font-bold">8</div><div class="col-span-2 text-right"><span class="tag pill-met">Met</span></div></div>
+      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Heena Makhija 🏆</div><div class="col-span-3 text-base font-medium">LeapScholar</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">3</div><div class="col-span-2 text-right"><span class="tag pill-met">Met</span></div></div>
+      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Ashis Kumar Lenka</div><div class="col-span-3 text-base font-medium">LeapScholar</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">3</div><div class="col-span-2 text-right"><span class="tag pill-met">Met</span></div></div>
+      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Divakaran M</div><div class="col-span-3 text-base font-medium">LeapScholar</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">3</div><div class="col-span-2 text-right"><span class="tag pill-met">Met</span></div></div>
+      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Rajgeetha Balamurali</div><div class="col-span-3 text-base font-medium">Test Prep</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">3</div><div class="col-span-2 text-right"><span class="tag pill-met">Met</span></div></div>
+      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Shruti Jain</div><div class="col-span-3 text-base font-medium">LeapScholar</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">3<span class="text-xs opacity-60 font-normal"> (1 complete)</span></div><div class="col-span-2 text-right"><span class="tag pill-met">Met*</span></div></div>
+
+      <!-- MISSED -->
+      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Shivam Kumar</div><div class="col-span-3 text-base font-medium">LeapScholar</div><div class="col-span-2 text-right num">8</div><div class="col-span-1 text-right num font-bold">4</div><div class="col-span-2 text-right"><span class="tag pill-miss">Missed</span></div></div>
+      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Subham Samal</div><div class="col-span-3 text-base font-medium">Founder's Office</div><div class="col-span-2 text-right num">8</div><div class="col-span-1 text-right num font-bold">2</div><div class="col-span-2 text-right"><span class="tag pill-miss">Missed</span></div></div>
+      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Lakshmikant</div><div class="col-span-3 text-base font-medium">Founder's Office</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">1</div><div class="col-span-2 text-right"><span class="tag pill-miss">Missed</span></div></div>
+      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Debashis Sahoo</div><div class="col-span-3 text-base font-medium">LeapScholar</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">2</div><div class="col-span-2 text-right"><span class="tag pill-miss">Missed</span></div></div>
+      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Siddhant Maruti</div><div class="col-span-3 text-base font-medium">LeapScholar</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">2</div><div class="col-span-2 text-right"><span class="tag pill-miss">Missed</span></div></div>
+      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Gaurav Kumar</div><div class="col-span-3 text-base font-medium">LeapScholar</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">2</div><div class="col-span-2 text-right"><span class="tag pill-miss">Missed</span></div></div>
+      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Pratyush Raju Paka</div><div class="col-span-3 text-base font-medium">Test Prep</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">2</div><div class="col-span-2 text-right"><span class="tag pill-miss">Missed</span></div></div>
+      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Vijay Chauhan 🏆</div><div class="col-span-3 text-base font-medium">Test Prep</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">2</div><div class="col-span-2 text-right"><span class="tag pill-miss">Missed</span></div></div>
+
+      <!-- NO SUBMISSION -->
+                        <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Akhoury Pranjal Kumar</div><div class="col-span-3 text-base font-medium">Test Prep</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">0</div><div class="col-span-2 text-right"><span class="tag pill-zero">No-show</span></div></div>
+      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Ujjawal Garg</div><div class="col-span-3 text-base font-medium">Test Prep</div><div class="col-span-2 text-right num">8</div><div class="col-span-1 text-right num font-bold">0</div><div class="col-span-2 text-right"><span class="tag pill-zero">No-show</span></div></div>
+      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Swapnil Agarwal</div><div class="col-span-3 text-base font-medium">LeapScholar</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">0</div><div class="col-span-2 text-right"><span class="tag pill-zero">No-show</span></div></div>
+      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Ankit Sherke</div><div class="col-span-3 text-base font-medium">LeapScholar</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">0</div><div class="col-span-2 text-right"><span class="tag pill-zero">No-show</span></div></div>
+                        <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Aashutosh Yadav</div><div class="col-span-3 text-base font-medium">Founder's Office</div><div class="col-span-2 text-right num">8</div><div class="col-span-1 text-right num font-bold">0</div><div class="col-span-2 text-right"><span class="tag pill-zero">No-show</span></div></div>
+      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Kashvi Gupta</div><div class="col-span-3 text-base font-medium">Founder's Office</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">0</div><div class="col-span-2 text-right"><span class="tag pill-zero">No-show</span></div></div>
+      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Abhishek Rai</div><div class="col-span-3 text-base font-medium">Founder's Office</div><div class="col-span-2 text-right num">8</div><div class="col-span-1 text-right num font-bold">0</div><div class="col-span-2 text-right"><span class="tag pill-zero">No-show</span></div></div>
+    </div>
+
+    <p class="text-xs mono opacity-100 mt-4">* Shruti Jain attempted 3 calls; 1 was substantively completed.</p>
+  </div>
+</section>
+
+<!-- ============ USER VOICES (PULL QUOTES) ============ -->
+<section id="voices" class="bg-cream border-b-2 border-ink relative overflow-hidden">
+  <div class="absolute inset-0 grain pointer-events-none"></div>
+  <div class="relative max-w-[1280px] mx-auto px-6 py-20">
+    <div class="kicker text-[color:var(--orange)]">User voices · unfiltered</div>
+    <h2 class="serif font-black text-5xl md:text-6xl mt-2 mb-3 leading-none">What real users said.</h2>
+    <p class="max-w-2xl opacity-100 mb-12">The reason this ritual works. None of these came from a survey, a dashboard, or a sprint review. They came from someone sitting on a call, asking a follow-up question, and writing it down.</p>
+
+    <div class="grid md:grid-cols-12 gap-6">
+      <!-- Kaustubh -->
+      <figure class="md:col-span-7 chunk p-10 bg-paper relative overflow-hidden">
+        <span class="quote-mark absolute top-2 left-4 select-none">"</span>
+        <blockquote class="serif text-3xl md:text-4xl font-medium leading-[1.15] relative">
+          I can't just go and say <em>ki</em> bahar padhne jaana hai. I have to tell my family with the proper roadmap. I can't just talk and yeah with them.
+        </blockquote>
+        <figcaption class="mt-6 flex items-center gap-4">
+          <div class="w-12 h-12 rounded-full bg-orange flex items-center justify-center text-white serif font-black text-xl">K</div>
+          <div>
+            <div class="font-bold">Kaustubh Arora</div>
+            <div class="text-xs mono uppercase tracking-wider opacity-100">User · interviewed by Param Thakkar</div>
+          </div>
+          <span class="ml-auto tag bg-[color:var(--lime)]">Family conversation gap</span>
+        </figcaption>
+      </figure>
+
+      <!-- Anushree -->
+      <figure class="md:col-span-5 chunk p-8 bg-ink text-[color:var(--paper)] relative overflow-hidden">
+        <blockquote class="serif text-2xl md:text-3xl font-medium leading-snug">
+          The student left the session early — to avoid the LS person at the end. She told me later it <span class="text-[color:var(--lime)] italic">"looked like an advertisement."</span>
+        </blockquote>
+        <figcaption class="mt-6 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-[color:var(--lime)] flex items-center justify-center text-[color:var(--ink)] serif font-black">A</div>
+          <div>
+            <div class="font-bold">Anushree Tiwari</div>
+            <div class="text-[11px] mono uppercase tracking-wider opacity-100">Mentor · interviewed by Ashwin</div>
+          </div>
+        </figcaption>
+      </figure>
+
+      <!-- Sanskriti -->
+      <figure class="md:col-span-5 chunk p-8 bg-[color:var(--lime)] relative overflow-hidden">
+        <blockquote class="serif text-2xl md:text-3xl font-medium leading-snug">
+          It comes from English-school background. So it requires me to practice and understand where and what to answer… for me it's the practice I think I need to pay for.
+        </blockquote>
+        <figcaption class="mt-6 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-ink flex items-center justify-center text-[color:var(--lime)] serif font-black">S</div>
+          <div>
+            <div class="font-bold">Sanskriti</div>
+            <div class="text-[11px] mono uppercase tracking-wider opacity-100">IELTS user · interviewed by Pratyush</div>
+          </div>
+        </figcaption>
+      </figure>
+
+      <!-- Mini quotes -->
+      <div class="md:col-span-7 grid sm:grid-cols-2 gap-4">
+        <figure class="chunk-sm p-5 bg-paper">
+          <blockquote class="serif italic text-lg leading-snug">"GB's tech is 100% better. I still send to KAC for 4% more commission."</blockquote>
+          <figcaption class="text-[11px] mono uppercase tracking-wider opacity-100 mt-3">Muralikrishna · via Ashita</figcaption>
+        </figure>
+        <figure class="chunk-sm p-5 bg-paper">
+          <blockquote class="serif italic text-lg leading-snug">"I was searching for IELTS — but ended up on the counselling page and signed up."</blockquote>
+          <figcaption class="text-[11px] mono uppercase tracking-wider opacity-100 mt-3">Bhumi · via Abhishek M</figcaption>
+        </figure>
+        <figure class="chunk-sm p-5 bg-paper">
+          <blockquote class="serif italic text-lg leading-snug">"The shortlist returned only private universities. The 12-public-uni promise is why I picked LS."</blockquote>
+          <figcaption class="text-[11px] mono uppercase tracking-wider opacity-100 mt-3">Ram · via Heena</figcaption>
+        </figure>
+        <figure class="chunk-sm p-5 bg-paper">
+          <blockquote class="serif italic text-lg leading-snug">"Don't have any questions" — said by 5 of 7 cold-called fresh leads.</blockquote>
+          <figcaption class="text-[11px] mono uppercase tracking-wider opacity-100 mt-3">Methodology meta-finding · Subham</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ROLL CALL ============ -->
+<section id="roll" class="bg-cream border-b-2 border-ink">
+  <div class="max-w-[1280px] mx-auto px-6 py-20">
+    <div class="flex items-end justify-between mb-10 flex-wrap gap-4">
+      <div>
+        <div class="kicker text-[color:var(--orange)]">Great quality roll-call</div>
+        <h2 class="serif font-black text-5xl md:text-6xl mt-2 leading-none">The honour roll.</h2>
+        <p class="mt-3 max-w-2xl opacity-100">Met or exceeded quota AND produced insights specific to the actual product and users. Ten submitters cleared the bar.</p>
+      </div>
+      <div class="flex items-center gap-5 text-xs font-semibold">
+        <span class="flex items-center gap-2"><span class="swatch" style="background:var(--lime);"></span>Exceeded quota</span>
+        <span class="flex items-center gap-2"><span class="swatch" style="background:var(--paper);"></span>Met quota</span>
+      </div>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+      <button type="button" onclick="openModal('abhishek-m')" class="text-left chunk-sm p-5 bg-paper hover:-translate-y-1 hover:shadow-[5px_8px_0_0_var(--ink)] transition-all duration-150 cursor-pointer">
+        <div class="flex items-center justify-between"><span class="tag bg-[color:var(--lime)] font-bold">4 / 3</span><span class="kicker">Founder's Office</span></div>
+        <h4 class="serif font-bold text-2xl mt-3 leading-tight">Abhishek M</h4>
+        <p class="text-sm mt-2 font-medium">Ad-targeting vs landing-page intent mismatch</p>
+        <div class="mt-3 flex items-center gap-2 text-[11px] mono uppercase tracking-wider font-semibold">
+          <span>Open insights</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </div>
+      </button>
+      <button type="button" onclick="openModal('anirudh-amudan')" class="text-left chunk-sm p-5 bg-paper hover:-translate-y-1 hover:shadow-[5px_8px_0_0_var(--ink)] transition-all duration-150 cursor-pointer">
+        <div class="flex items-center justify-between"><span class="tag bg-[color:var(--lime)] font-bold">9 / 8</span><span class="kicker">Airo</span></div>
+        <h4 class="serif font-bold text-2xl mt-3 leading-tight">Anirudh Amudan</h4>
+        <p class="text-sm mt-2 font-medium">Stage-by-stage Airo drop-off RCA</p>
+        <div class="mt-3 flex items-center gap-2 text-[11px] mono uppercase tracking-wider font-semibold">
+          <span>Open insights</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </div>
+      </button>
+      <button type="button" onclick="openModal('anuj-garg')" class="text-left chunk-sm p-5 bg-paper hover:-translate-y-1 hover:shadow-[5px_8px_0_0_var(--ink)] transition-all duration-150 cursor-pointer">
+        <div class="flex items-center justify-between"><span class="tag bg-[color:var(--lime)] font-bold">4 / 3</span><span class="kicker">Unisetu</span></div>
+        <h4 class="serif font-bold text-2xl mt-3 leading-tight">Anuj Garg</h4>
+        <p class="text-sm mt-2 font-medium">Sharpest product-and-process synthesis across 4 power-user interviews</p>
+        <div class="mt-3 flex items-center gap-2 text-[11px] mono uppercase tracking-wider font-semibold">
+          <span>Open insights</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </div>
+      </button>
+      <button type="button" onclick="openModal('aratrika-roy')" class="text-left chunk-sm p-5 bg-paper hover:-translate-y-1 hover:shadow-[5px_8px_0_0_var(--ink)] transition-all duration-150 cursor-pointer">
+        <div class="flex items-center justify-between"><span class="tag pill-met font-bold">3 / 3</span><span class="kicker">Unisetu</span></div>
+        <h4 class="serif font-bold text-2xl mt-3 leading-tight">Aratrika Roy</h4>
+        <p class="text-sm mt-2 font-medium">Operational users want basics fixed before novelty</p>
+        <div class="mt-3 flex items-center gap-2 text-[11px] mono uppercase tracking-wider font-semibold">
+          <span>Open insights</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </div>
+      </button>
+      <button type="button" onclick="openModal('ashita-jain')" class="text-left chunk-sm p-5 bg-[color:var(--lime)] hover:-translate-y-1 hover:shadow-[5px_8px_0_0_var(--ink)] transition-all duration-150 cursor-pointer">
+        <div class="flex items-center justify-between"><span class="tag pill-met font-bold">3 / 3</span><span class="kicker">🏆 BU Winner</span></div>
+        <h4 class="serif font-bold text-2xl mt-3 leading-tight">Ashita Jain</h4>
+        <p class="text-sm mt-2 font-medium">"Commission Parity Overrides Product Quality."</p>
+        <div class="mt-3 flex items-center gap-2 text-[11px] mono uppercase tracking-wider font-semibold">
+          <span>Open insights</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </div>
+      </button>
+      <button type="button" onclick="openModal('ashwin-susarla')" class="text-left chunk-sm p-5 bg-orange text-white hover:-translate-y-1 hover:shadow-[5px_8px_0_0_var(--ink)] transition-all duration-150 cursor-pointer">
+        <div class="flex items-center justify-between"><span class="tag font-bold" style="background:rgba(255,255,255,.95);color:var(--ink);border-color:var(--ink);">9 / 8</span><span class="kicker">🏆 Overall Winner</span></div>
+        <h4 class="serif font-bold text-2xl mt-3 leading-tight">Ashwin Susarla</h4>
+        <p class="text-sm mt-2 font-medium">"Topmate works precisely because it stays out of the way."</p>
+        <div class="mt-3 flex items-center gap-2 text-[11px] mono uppercase tracking-wider font-semibold">
+          <span>Open insights</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </div>
+      </button>
+      <button type="button" onclick="openModal('heena-makhija')" class="text-left chunk-sm p-5 bg-[color:var(--indigo)] text-white hover:-translate-y-1 hover:shadow-[5px_8px_0_0_var(--ink)] transition-all duration-150 cursor-pointer">
+        <div class="flex items-center justify-between"><span class="tag font-bold" style="background:rgba(255,255,255,.95);color:var(--ink);border-color:var(--ink);">3 / 3</span><span class="kicker">🏆 BU Winner</span></div>
+        <h4 class="serif font-bold text-2xl mt-3 leading-tight">Heena Makhija</h4>
+        <p class="text-sm mt-2 font-medium">"Individual counsellors are the entire product."</p>
+        <div class="mt-3 flex items-center gap-2 text-[11px] mono uppercase tracking-wider font-semibold">
+          <span>Open insights</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </div>
+      </button>
+      <button type="button" onclick="openModal('param-thakkar')" class="text-left chunk-sm p-5 bg-paper hover:-translate-y-1 hover:shadow-[5px_8px_0_0_var(--ink)] transition-all duration-150 cursor-pointer">
+        <div class="flex items-center justify-between"><span class="tag pill-met font-bold">8 / 8</span><span class="kicker">🥈 Runner-up</span></div>
+        <h4 class="serif font-bold text-2xl mt-3 leading-tight">Param Thakkar</h4>
+        <p class="text-sm mt-2 font-medium">"The app isn't built for Stage 1."</p>
+        <div class="mt-3 flex items-center gap-2 text-[11px] mono uppercase tracking-wider font-semibold">
+          <span>Open insights</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </div>
+      </button>
+      <button type="button" onclick="openModal('sehaj-bajaj')" class="text-left chunk-sm p-5 bg-paper hover:-translate-y-1 hover:shadow-[5px_8px_0_0_var(--ink)] transition-all duration-150 cursor-pointer">
+        <div class="flex items-center justify-between"><span class="tag bg-[color:var(--lime)] font-bold">10 / 8</span><span class="kicker">Founder's Office</span></div>
+        <h4 class="serif font-bold text-2xl mt-3 leading-tight">Sehaj Bajaj</h4>
+        <p class="text-sm mt-2 font-medium">10 conversations with the sharpest catalogue insights of the cycle</p>
+        <div class="mt-3 flex items-center gap-2 text-[11px] mono uppercase tracking-wider font-semibold">
+          <span>Open insights</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </div>
+      </button>
+      <button type="button" onclick="openModal('shiksha-mishra')" class="text-left chunk-sm p-5 bg-paper hover:-translate-y-1 hover:shadow-[5px_8px_0_0_var(--ink)] transition-all duration-150 cursor-pointer">
+        <div class="flex items-center justify-between"><span class="tag pill-met font-bold">8 / 8</span><span class="kicker">Career Bot</span></div>
+        <h4 class="serif font-bold text-2xl mt-3 leading-tight">Shiksha Mishra</h4>
+        <p class="text-sm mt-2 font-medium">Most rigorous bug-level product testing of the cycle</p>
+        <div class="mt-3 flex items-center gap-2 text-[11px] mono uppercase tracking-wider font-semibold">
+          <span>Open insights</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </div>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BU CHAMPIONS ============ -->
+<section id="bus" class="border-b-2 border-ink">
+  <div class="max-w-[1280px] mx-auto px-6 py-20">
+    <div class="flex items-end justify-between mb-10 flex-wrap gap-4">
+      <div>
+        <div class="kicker text-[color:var(--orange)]">Business Unit champions</div>
+        <h2 class="serif font-black text-5xl md:text-6xl mt-2 leading-none">One winner per BU.</h2>
+        <p class="mt-3 max-w-2xl opacity-100">Four business units. Four winners. Each winner reframed their BU's product story, not just listed pain points.</p>
+      </div>
+      
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-5">
+      <!-- Ashita -->
+      <article class="chunk p-7 bg-[color:var(--lime)]">
+        <div class="flex items-start justify-between">
+          <div>
+            <span class="tag bg-paper">GeeBee · Unisetu CSPs</span>
+            <h3 class="serif font-black text-4xl mt-3 leading-none">Ashita Jain</h3>
+          </div>
+          <div class="text-right">
+            <div class="serif font-black text-4xl num">3<span class="opacity-60">/3</span></div>
+            <div class="text-[10px] mono uppercase tracking-wider opacity-100">interviews</div>
+          </div>
+        </div>
+        <p class="serif italic text-2xl leading-tight mt-5">"Commission Parity Overrides Product Quality."</p>
+        <div class="mt-5 grid grid-cols-2 gap-2.5 text-sm">
+          <div class="chunk-xs p-3.5 bg-paper"><span class="font-bold">Data accuracy</span> is a trust crisis, not a feature gap.</div>
+          <div class="chunk-xs p-3.5 bg-paper"><span class="font-bold">8/10 students</span> depend on loans — unsurfaced compatibility blocks deals.</div>
+          <div class="chunk-xs p-3.5 bg-paper"><span class="font-bold">15-uni cap</span>, no draft delete — small UX gaps compound into "immature".</div>
+          <div class="chunk-xs p-3.5 bg-paper"><span class="font-bold">Strengths invisible</span> to CSPs comparing portals.</div>
+        </div>
+      </article>
+
+      <!-- Ashwin -->
+      <article class="chunk p-7 bg-orange text-white">
+        <div class="flex items-start justify-between">
+          <div>
+            <span class="tag" style="border-color:#fff;color:#fff;">Founder's Office</span>
+            <h3 class="serif font-black text-4xl mt-3 leading-none">Ashwin Susarla</h3>
+          </div>
+          <div class="text-right">
+            <div class="serif font-black text-4xl num">9<span class="opacity-60">/8</span></div>
+            <div class="text-[10px] mono uppercase tracking-wider opacity-100">interviews</div>
+          </div>
+        </div>
+        <p class="serif italic text-2xl leading-tight mt-5">"Topmate works precisely because it stays out of the way."</p>
+        <div class="mt-5 grid grid-cols-2 gap-2.5 text-sm text-[color:var(--ink)]">
+          <div class="chunk-xs p-3.5 bg-paper">1:1 exclusivity beats sales follow-up.</div>
+          <div class="chunk-xs p-3.5 bg-paper">Mentor-as-referral as a discovery channel.</div>
+          <div class="chunk-xs p-3.5 bg-paper">Cultural affinity matching (Malayali, Chevening).</div>
+          <div class="chunk-xs p-3.5 bg-paper">Post-admit segment is unserved.</div>
+        </div>
+      </article>
+
+      <!-- Heena -->
+      <article class="chunk p-7 bg-[color:var(--indigo)] text-white">
+        <div class="flex items-start justify-between">
+          <div>
+            <span class="tag" style="border-color:#fff;color:#fff;">LeapScholar · Germany</span>
+            <h3 class="serif font-black text-4xl mt-3 leading-none">Heena Makhija</h3>
+          </div>
+          <div class="text-right">
+            <div class="serif font-black text-4xl num">3<span class="opacity-60">/3</span></div>
+            <div class="text-[10px] mono uppercase tracking-wider opacity-100">interviews</div>
+          </div>
+        </div>
+        <p class="serif italic text-2xl leading-tight mt-5">"Individual counsellors are the entire product."</p>
+        <div class="mt-5 grid grid-cols-2 gap-2.5 text-sm text-[color:var(--ink)]">
+          <div class="chunk-xs p-3.5 bg-paper">All 3 families cross-check shortlists with ChatGPT.</div>
+          <div class="chunk-xs p-3.5 bg-paper">Kashish: same counsellor, opposite student experiences.</div>
+          <div class="chunk-xs p-3.5 bg-paper">IELTS is the acquisition channel for Germany.</div>
+          <div class="chunk-xs p-3.5 bg-paper">"12 public universities" promise is load-bearing.</div>
+        </div>
+      </article>
+
+      <!-- Vijay -->
+      <article class="chunk p-7 bg-cream">
+        <div class="flex items-start justify-between">
+          <div>
+            <span class="tag bg-paper">Test Prep · SAT</span>
+            <h3 class="serif font-black text-4xl mt-3 leading-none">Vijay Chauhan</h3>
+          </div>
+          <div class="text-right">
+            <div class="serif font-black text-4xl num">2<span class="opacity-60">/3</span></div>
+            <div class="text-[10px] mono uppercase tracking-wider opacity-100">interviews · quota miss</div>
+          </div>
+        </div>
+        <p class="serif italic text-2xl leading-tight mt-5">"SAT-prep parents want career &amp; college guidance, not SAT prep."</p>
+        <div class="mt-5 grid grid-cols-2 gap-2.5 text-sm">
+          <div class="chunk-xs p-3.5 bg-paper">ROI gate: ₹40–50L OK with scholarship, ₹80–90L not.</div>
+          <div class="chunk-xs p-3.5 bg-paper">Rama: exam speed &gt; concept difficulty anxiety.</div>
+          <div class="chunk-xs p-3.5 bg-paper">Referral did the conversion — parent never attended demo.</div>
+          <div class="chunk-xs p-3.5 bg-paper">Sharpest insights in the BU despite missing quota.</div>
+        </div>
+      </article>
     </div>
   </div>
 </section>
@@ -337,330 +725,6 @@
 
 <div class="stripe-hr"></div>
 
-<!-- ============ BU CHAMPIONS ============ -->
-<section id="bus" class="border-b-2 border-ink">
-  <div class="max-w-[1280px] mx-auto px-6 py-20">
-    <div class="flex items-end justify-between mb-10 flex-wrap gap-4">
-      <div>
-        <div class="kicker text-[color:var(--orange)]">Business Unit champions</div>
-        <h2 class="serif font-black text-5xl md:text-6xl mt-2 leading-none">One winner per BU.</h2>
-        <p class="mt-3 max-w-2xl opacity-100">Five business units. Four winners. Yocket sat this cycle out — zero submissions from three employees. The empty chair is a feature, not a bug.</p>
-      </div>
-      <div class="chunk-xs p-3 bg-cream text-xs mono uppercase tracking-wider">
-        <span class="text-[color:var(--orange)] font-bold">Yocket</span> · 0 of 3 submitted
-      </div>
-    </div>
-
-    <div class="grid md:grid-cols-2 gap-5">
-      <!-- Ashita -->
-      <article class="chunk p-7 bg-[color:var(--lime)]">
-        <div class="flex items-start justify-between">
-          <div>
-            <span class="tag bg-paper">GeeBee · Unisetu CSPs</span>
-            <h3 class="serif font-black text-4xl mt-3 leading-none">Ashita Jain</h3>
-          </div>
-          <div class="text-right">
-            <div class="serif font-black text-4xl num">3<span class="opacity-60">/3</span></div>
-            <div class="text-[10px] mono uppercase tracking-wider opacity-100">interviews</div>
-          </div>
-        </div>
-        <p class="serif italic text-2xl leading-tight mt-5">"Commission Parity Overrides Product Quality."</p>
-        <div class="mt-5 grid grid-cols-2 gap-2.5 text-sm">
-          <div class="chunk-xs p-3.5 bg-paper"><span class="font-bold">Data accuracy</span> is a trust crisis, not a feature gap.</div>
-          <div class="chunk-xs p-3.5 bg-paper"><span class="font-bold">8/10 students</span> depend on loans — unsurfaced compatibility blocks deals.</div>
-          <div class="chunk-xs p-3.5 bg-paper"><span class="font-bold">15-uni cap</span>, no draft delete — small UX gaps compound into "immature".</div>
-          <div class="chunk-xs p-3.5 bg-paper"><span class="font-bold">Strengths invisible</span> to CSPs comparing portals.</div>
-        </div>
-      </article>
-
-      <!-- Ashwin -->
-      <article class="chunk p-7 bg-orange text-white">
-        <div class="flex items-start justify-between">
-          <div>
-            <span class="tag" style="border-color:#fff;color:#fff;">Founder's Office</span>
-            <h3 class="serif font-black text-4xl mt-3 leading-none">Ashwin Susarla</h3>
-          </div>
-          <div class="text-right">
-            <div class="serif font-black text-4xl num">9<span class="opacity-60">/8</span></div>
-            <div class="text-[10px] mono uppercase tracking-wider opacity-100">interviews</div>
-          </div>
-        </div>
-        <p class="serif italic text-2xl leading-tight mt-5">"Topmate works precisely because it stays out of the way."</p>
-        <div class="mt-5 grid grid-cols-2 gap-2.5 text-sm text-[color:var(--ink)]">
-          <div class="chunk-xs p-3.5 bg-paper">1:1 exclusivity beats sales follow-up.</div>
-          <div class="chunk-xs p-3.5 bg-paper">Mentor-as-referral as a discovery channel.</div>
-          <div class="chunk-xs p-3.5 bg-paper">Cultural affinity matching (Malayali, Chevening).</div>
-          <div class="chunk-xs p-3.5 bg-paper">Post-admit segment is unserved.</div>
-        </div>
-      </article>
-
-      <!-- Heena -->
-      <article class="chunk p-7 bg-[color:var(--indigo)] text-white">
-        <div class="flex items-start justify-between">
-          <div>
-            <span class="tag" style="border-color:#fff;color:#fff;">LeapScholar · Germany</span>
-            <h3 class="serif font-black text-4xl mt-3 leading-none">Heena Makhija</h3>
-          </div>
-          <div class="text-right">
-            <div class="serif font-black text-4xl num">3<span class="opacity-60">/3</span></div>
-            <div class="text-[10px] mono uppercase tracking-wider opacity-100">interviews</div>
-          </div>
-        </div>
-        <p class="serif italic text-2xl leading-tight mt-5">"Individual counsellors are the entire product."</p>
-        <div class="mt-5 grid grid-cols-2 gap-2.5 text-sm text-[color:var(--ink)]">
-          <div class="chunk-xs p-3.5 bg-paper">All 3 families cross-check shortlists with ChatGPT.</div>
-          <div class="chunk-xs p-3.5 bg-paper">Kashish: same counsellor, opposite student experiences.</div>
-          <div class="chunk-xs p-3.5 bg-paper">IELTS is the acquisition channel for Germany.</div>
-          <div class="chunk-xs p-3.5 bg-paper">"12 public universities" promise is load-bearing.</div>
-        </div>
-      </article>
-
-      <!-- Vijay -->
-      <article class="chunk p-7 bg-cream">
-        <div class="flex items-start justify-between">
-          <div>
-            <span class="tag bg-paper">Test Prep · SAT</span>
-            <h3 class="serif font-black text-4xl mt-3 leading-none">Vijay Chauhan</h3>
-          </div>
-          <div class="text-right">
-            <div class="serif font-black text-4xl num">2<span class="opacity-60">/3</span></div>
-            <div class="text-[10px] mono uppercase tracking-wider opacity-100">interviews · quota miss</div>
-          </div>
-        </div>
-        <p class="serif italic text-2xl leading-tight mt-5">"SAT-prep parents want career &amp; college guidance, not SAT prep."</p>
-        <div class="mt-5 grid grid-cols-2 gap-2.5 text-sm">
-          <div class="chunk-xs p-3.5 bg-paper">ROI gate: ₹40–50L OK with scholarship, ₹80–90L not.</div>
-          <div class="chunk-xs p-3.5 bg-paper">Rama: exam speed &gt; concept difficulty anxiety.</div>
-          <div class="chunk-xs p-3.5 bg-paper">Referral did the conversion — parent never attended demo.</div>
-          <div class="chunk-xs p-3.5 bg-paper">Sharpest insights in the BU despite missing quota.</div>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ============ USER VOICES (PULL QUOTES) ============ -->
-<section id="voices" class="bg-cream border-b-2 border-ink relative overflow-hidden">
-  <div class="absolute inset-0 grain pointer-events-none"></div>
-  <div class="relative max-w-[1280px] mx-auto px-6 py-20">
-    <div class="kicker text-[color:var(--orange)]">User voices · unfiltered</div>
-    <h2 class="serif font-black text-5xl md:text-6xl mt-2 mb-3 leading-none">What real users said.</h2>
-    <p class="max-w-2xl opacity-100 mb-12">The reason this ritual works. None of these came from a survey, a dashboard, or a sprint review. They came from someone sitting on a call, asking a follow-up question, and writing it down.</p>
-
-    <div class="grid md:grid-cols-12 gap-6">
-      <!-- Kaustubh -->
-      <figure class="md:col-span-7 chunk p-10 bg-paper relative overflow-hidden">
-        <span class="quote-mark absolute top-2 left-4 select-none">"</span>
-        <blockquote class="serif text-3xl md:text-4xl font-medium leading-[1.15] relative">
-          I can't just go and say <em>ki</em> bahar padhne jaana hai. I have to tell my family with the proper roadmap. I can't just talk and yeah with them.
-        </blockquote>
-        <figcaption class="mt-6 flex items-center gap-4">
-          <div class="w-12 h-12 rounded-full bg-orange flex items-center justify-center text-white serif font-black text-xl">K</div>
-          <div>
-            <div class="font-bold">Kaustubh Arora</div>
-            <div class="text-xs mono uppercase tracking-wider opacity-100">User · interviewed by Param Thakkar</div>
-          </div>
-          <span class="ml-auto tag bg-[color:var(--lime)]">Family conversation gap</span>
-        </figcaption>
-      </figure>
-
-      <!-- Anushree -->
-      <figure class="md:col-span-5 chunk p-8 bg-ink text-[color:var(--paper)] relative overflow-hidden">
-        <blockquote class="serif text-2xl md:text-3xl font-medium leading-snug">
-          The student left the session early — to avoid the LS person at the end. She told me later it <span class="text-[color:var(--lime)] italic">"looked like an advertisement."</span>
-        </blockquote>
-        <figcaption class="mt-6 flex items-center gap-3">
-          <div class="w-10 h-10 rounded-full bg-[color:var(--lime)] flex items-center justify-center text-[color:var(--ink)] serif font-black">A</div>
-          <div>
-            <div class="font-bold">Anushree Tiwari</div>
-            <div class="text-[11px] mono uppercase tracking-wider opacity-100">Mentor · interviewed by Ashwin</div>
-          </div>
-        </figcaption>
-      </figure>
-
-      <!-- Sanskriti -->
-      <figure class="md:col-span-5 chunk p-8 bg-[color:var(--lime)] relative overflow-hidden">
-        <blockquote class="serif text-2xl md:text-3xl font-medium leading-snug">
-          It comes from English-school background. So it requires me to practice and understand where and what to answer… for me it's the practice I think I need to pay for.
-        </blockquote>
-        <figcaption class="mt-6 flex items-center gap-3">
-          <div class="w-10 h-10 rounded-full bg-ink flex items-center justify-center text-[color:var(--lime)] serif font-black">S</div>
-          <div>
-            <div class="font-bold">Sanskriti</div>
-            <div class="text-[11px] mono uppercase tracking-wider opacity-100">IELTS user · interviewed by Pratyush</div>
-          </div>
-        </figcaption>
-      </figure>
-
-      <!-- Mini quotes -->
-      <div class="md:col-span-7 grid sm:grid-cols-2 gap-4">
-        <figure class="chunk-sm p-5 bg-paper">
-          <blockquote class="serif italic text-lg leading-snug">"GB's tech is 100% better. I still send to KAC for 4% more commission."</blockquote>
-          <figcaption class="text-[11px] mono uppercase tracking-wider opacity-100 mt-3">Muralikrishna · via Ashita</figcaption>
-        </figure>
-        <figure class="chunk-sm p-5 bg-paper">
-          <blockquote class="serif italic text-lg leading-snug">"I was searching for IELTS — but ended up on the counselling page and signed up."</blockquote>
-          <figcaption class="text-[11px] mono uppercase tracking-wider opacity-100 mt-3">Bhumi · via Abhishek M</figcaption>
-        </figure>
-        <figure class="chunk-sm p-5 bg-paper">
-          <blockquote class="serif italic text-lg leading-snug">"The shortlist returned only private universities. The 12-public-uni promise is why I picked LS."</blockquote>
-          <figcaption class="text-[11px] mono uppercase tracking-wider opacity-100 mt-3">Ram · via Heena</figcaption>
-        </figure>
-        <figure class="chunk-sm p-5 bg-paper">
-          <blockquote class="serif italic text-lg leading-snug">"Don't have any questions" — said by 5 of 7 cold-called fresh leads.</blockquote>
-          <figcaption class="text-[11px] mono uppercase tracking-wider opacity-100 mt-3">Methodology meta-finding · Subham</figcaption>
-        </figure>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ ROLL CALL ============ -->
-<section id="roll" class="bg-cream border-b-2 border-ink">
-  <div class="max-w-[1280px] mx-auto px-6 py-20">
-    <div class="flex items-end justify-between mb-10 flex-wrap gap-4">
-      <div>
-        <div class="kicker text-[color:var(--orange)]">Great quality roll-call</div>
-        <h2 class="serif font-black text-5xl md:text-6xl mt-2 leading-none">The honour roll.</h2>
-        <p class="mt-3 max-w-2xl opacity-100">Met or exceeded quota AND produced insights specific to the actual product and users. Ten submitters cleared the bar.</p>
-      </div>
-      <div class="flex items-center gap-5 text-xs font-semibold">
-        <span class="flex items-center gap-2"><span class="swatch" style="background:var(--lime);"></span>Exceeded quota</span>
-        <span class="flex items-center gap-2"><span class="swatch" style="background:var(--paper);"></span>Met quota</span>
-      </div>
-    </div>
-
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-      <!-- card -->
-      <article class="chunk-sm p-5 bg-paper">
-        <div class="flex items-center justify-between"><span class="tag bg-[color:var(--lime)]">4 / 3</span><span class="kicker opacity-100">FO</span></div>
-        <h4 class="serif font-bold text-2xl mt-3 leading-tight">Abhishek M</h4>
-        <p class="text-sm mt-2 font-medium">Caught the IELTS-ad → counselling-page intent mismatch (Bhumi). Proposed specific recovery flows for dropped calls.</p>
-      </article>
-      <article class="chunk-sm p-5 bg-paper">
-        <div class="flex items-center justify-between"><span class="tag bg-[color:var(--lime)]">9 / 8</span><span class="kicker opacity-100">LS · Airo</span></div>
-        <h4 class="serif font-bold text-2xl mt-3 leading-tight">Anirudh Amudan</h4>
-        <p class="text-sm mt-2 font-medium">Stage-by-stage Airo drop-off RCA — every dropout mapped to a fixable pattern. Most operational submission of the cycle.</p>
-      </article>
-      <article class="chunk-sm p-5 bg-paper">
-        <div class="flex items-center justify-between"><span class="tag bg-[color:var(--lime)]">4 / 3</span><span class="kicker opacity-100">GeeBee</span></div>
-        <h4 class="serif font-bold text-2xl mt-3 leading-tight">Anuj Garg</h4>
-        <p class="text-sm mt-2 font-medium">SOP-bypass / ZeroGPT compliance flag + 50% Canada application stall with a one-line policy fix.</p>
-      </article>
-      <article class="chunk-sm p-5 bg-paper">
-        <div class="flex items-center justify-between"><span class="tag pill-met">3 / 3</span><span class="kicker opacity-100">GeeBee</span></div>
-        <h4 class="serif font-bold text-2xl mt-3 leading-tight">Aratrika Roy</h4>
-        <p class="text-sm mt-2 font-medium">Captured the email-notification-over-mobile-app preference — operational users want basics fixed first.</p>
-      </article>
-      <article class="chunk-sm p-5 bg-[color:var(--lime)]">
-        <div class="flex items-center justify-between"><span class="tag pill-met">3 / 3</span><span class="kicker opacity-100">GeeBee · 🏆 BU</span></div>
-        <h4 class="serif font-bold text-2xl mt-3 leading-tight">Ashita Jain</h4>
-        <p class="text-sm mt-2 font-medium">Sharpest thesis of the round: Commission Parity Overrides Product Quality. 5-theme cross-interview synthesis.</p>
-      </article>
-      <article class="chunk-sm p-5 bg-orange text-white">
-        <div class="flex items-center justify-between"><span class="tag" style="border-color:#fff;color:#fff;">9 / 8</span><span class="kicker opacity-100">FO · 🏆 Overall</span></div>
-        <h4 class="serif font-bold text-2xl mt-3 leading-tight">Ashwin Susarla</h4>
-        <p class="text-sm mt-2 font-medium">Two product surfaces, 29–64 min sessions, the 1:1 exclusivity insight nobody else would have surfaced.</p>
-      </article>
-      <article class="chunk-sm p-5 bg-[color:var(--indigo)] text-white">
-        <div class="flex items-center justify-between"><span class="tag" style="border-color:#fff;color:#fff;">3 / 3</span><span class="kicker opacity-100">LS · 🏆 BU</span></div>
-        <h4 class="serif font-bold text-2xl mt-3 leading-tight">Heena Makhija</h4>
-        <p class="text-sm mt-2 font-medium">"Individual counsellors are the entire product." Most narrative-rich writeup in LS.</p>
-      </article>
-      <article class="chunk-sm p-5 bg-paper">
-        <div class="flex items-center justify-between"><span class="tag pill-met">8 / 8</span><span class="kicker opacity-100">FO · 🥈 Runner-up</span></div>
-        <h4 class="serif font-bold text-2xl mt-3 leading-tight">Param Thakkar</h4>
-        <p class="text-sm mt-2 font-medium">App isn't built for Stage 1. Family-conversation gap. Two hard bugs caught from a single call.</p>
-      </article>
-      <article class="chunk-sm p-5 bg-paper">
-        <div class="flex items-center justify-between"><span class="tag bg-[color:var(--lime)]">10 / 8</span><span class="kicker opacity-100">FO</span></div>
-        <h4 class="serif font-bold text-2xl mt-3 leading-tight">Sehaj Bajaj</h4>
-        <p class="text-sm mt-2 font-medium">10 conversations. Sharpest catalogue/Germany insights — private-only shortlist, fee-display error.</p>
-      </article>
-      <article class="chunk-sm p-5 bg-paper">
-        <div class="flex items-center justify-between"><span class="tag pill-met">8 / 8</span><span class="kicker opacity-100">FO · Career Bot</span></div>
-        <h4 class="serif font-bold text-2xl mt-3 leading-tight">Shiksha Mishra</h4>
-        <p class="text-sm mt-2 font-medium">Most rigorous bug-level product testing of the cycle. CSAT tracking. Specific bug taxonomy across 8 users.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ============ QUOTA BOARD ============ -->
-<section id="board" class="bg-paper border-t-2 border-ink relative">
-  <div class="max-w-[1280px] mx-auto px-6 py-20">
-    <div class="flex items-end justify-between mb-10 flex-wrap gap-4">
-      <div>
-        <div class="kicker text-[color:var(--orange)]">The full standings</div>
-        <h2 class="serif font-black text-5xl md:text-6xl mt-2 leading-none">Quota board.</h2>
-        <p class="mt-3 max-w-2xl opacity-100">35 names on the roster. 22 submitted. 13 didn't show up. The board is the board — sorted by status, then quota.</p>
-      </div>
-      <div class="flex flex-wrap items-center gap-5 text-xs font-semibold">
-        <span class="flex items-center gap-2"><span class="swatch" style="background:var(--lime);"></span>Exceeded</span>
-        <span class="flex items-center gap-2"><span class="swatch" style="background:#E7E1FE;"></span>Met</span>
-        <span class="flex items-center gap-2"><span class="swatch" style="background:#FFD9C8;"></span>Missed</span>
-        <span class="flex items-center gap-2"><span class="swatch" style="background:#1B1340;"></span>No submission</span>
-      </div>
-    </div>
-
-    <div class="chunk bg-paper overflow-hidden">
-      <div class="grid grid-cols-12 px-6 py-4 bg-ink text-[color:var(--paper)] text-[11px] mono uppercase tracking-wider">
-        <div class="col-span-4">Name</div>
-        <div class="col-span-3">BU</div>
-        <div class="col-span-2 text-right">Quota</div>
-        <div class="col-span-1 text-right">Done</div>
-        <div class="col-span-2 text-right">Status</div>
-      </div>
-
-      <!-- rows -->
-      <!-- EXCEEDED -->
-      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Anuj Garg</div><div class="col-span-3 text-base font-medium">GeeBee</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">4</div><div class="col-span-2 text-right"><span class="tag pill-pass">Exceeded</span></div></div>
-      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Ashwin Susarla 🏆</div><div class="col-span-3 text-base font-medium">Founder's Office</div><div class="col-span-2 text-right num">8</div><div class="col-span-1 text-right num font-bold">9</div><div class="col-span-2 text-right"><span class="tag pill-pass">Exceeded</span></div></div>
-      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Sehaj Bajaj</div><div class="col-span-3 text-base font-medium">Founder's Office</div><div class="col-span-2 text-right num">8</div><div class="col-span-1 text-right num font-bold">10</div><div class="col-span-2 text-right"><span class="tag pill-pass">Exceeded</span></div></div>
-      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Abhishek M</div><div class="col-span-3 text-base font-medium">Founder's Office</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">4</div><div class="col-span-2 text-right"><span class="tag pill-pass">Exceeded</span></div></div>
-      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Anirudh Amudan</div><div class="col-span-3 text-base font-medium">LeapScholar</div><div class="col-span-2 text-right num">8</div><div class="col-span-1 text-right num font-bold">9</div><div class="col-span-2 text-right"><span class="tag pill-pass">Exceeded</span></div></div>
-
-      <!-- MET -->
-      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Ashita Jain 🏆</div><div class="col-span-3 text-base font-medium">GeeBee</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">3</div><div class="col-span-2 text-right"><span class="tag pill-met">Met</span></div></div>
-      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Aratrika Roy</div><div class="col-span-3 text-base font-medium">GeeBee</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">3</div><div class="col-span-2 text-right"><span class="tag pill-met">Met</span></div></div>
-      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Param Thakkar 🥈</div><div class="col-span-3 text-base font-medium">Founder's Office</div><div class="col-span-2 text-right num">8</div><div class="col-span-1 text-right num font-bold">8</div><div class="col-span-2 text-right"><span class="tag pill-met">Met</span></div></div>
-      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Shiksha Mishra</div><div class="col-span-3 text-base font-medium">Founder's Office</div><div class="col-span-2 text-right num">8</div><div class="col-span-1 text-right num font-bold">8</div><div class="col-span-2 text-right"><span class="tag pill-met">Met</span></div></div>
-      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Heena Makhija 🏆</div><div class="col-span-3 text-base font-medium">LeapScholar</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">3</div><div class="col-span-2 text-right"><span class="tag pill-met">Met</span></div></div>
-      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Ashis Kumar Lenka</div><div class="col-span-3 text-base font-medium">LeapScholar</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">3</div><div class="col-span-2 text-right"><span class="tag pill-met">Met</span></div></div>
-      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Divakaran M</div><div class="col-span-3 text-base font-medium">LeapScholar</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">3</div><div class="col-span-2 text-right"><span class="tag pill-met">Met</span></div></div>
-      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Rajgeetha Balamurali</div><div class="col-span-3 text-base font-medium">Test Prep</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">3</div><div class="col-span-2 text-right"><span class="tag pill-met">Met</span></div></div>
-      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Shruti Jain</div><div class="col-span-3 text-base font-medium">LeapScholar</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">3<span class="text-xs opacity-60 font-normal"> (1 complete)</span></div><div class="col-span-2 text-right"><span class="tag pill-met">Met*</span></div></div>
-
-      <!-- MISSED -->
-      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Shivam Kumar</div><div class="col-span-3 text-base font-medium">LeapScholar</div><div class="col-span-2 text-right num">8</div><div class="col-span-1 text-right num font-bold">4</div><div class="col-span-2 text-right"><span class="tag pill-miss">Missed</span></div></div>
-      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Subham Samal</div><div class="col-span-3 text-base font-medium">Founder's Office</div><div class="col-span-2 text-right num">8</div><div class="col-span-1 text-right num font-bold">2</div><div class="col-span-2 text-right"><span class="tag pill-miss">Missed</span></div></div>
-      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Lakshmikant</div><div class="col-span-3 text-base font-medium">Founder's Office</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">1</div><div class="col-span-2 text-right"><span class="tag pill-miss">Missed</span></div></div>
-      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Debashis Sahoo</div><div class="col-span-3 text-base font-medium">LeapScholar</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">2</div><div class="col-span-2 text-right"><span class="tag pill-miss">Missed</span></div></div>
-      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Siddhant Maruti</div><div class="col-span-3 text-base font-medium">LeapScholar</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">2</div><div class="col-span-2 text-right"><span class="tag pill-miss">Missed</span></div></div>
-      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Gaurav Kumar</div><div class="col-span-3 text-base font-medium">LeapScholar</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">2</div><div class="col-span-2 text-right"><span class="tag pill-miss">Missed</span></div></div>
-      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Pratyush Raju Paka</div><div class="col-span-3 text-base font-medium">Test Prep</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">2</div><div class="col-span-2 text-right"><span class="tag pill-miss">Missed</span></div></div>
-      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Vijay Chauhan 🏆</div><div class="col-span-3 text-base font-medium">Test Prep</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">2</div><div class="col-span-2 text-right"><span class="tag pill-miss">Missed</span></div></div>
-
-      <!-- NO SUBMISSION -->
-      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Bishal Mukherjee</div><div class="col-span-3 text-base font-medium">Yocket</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">0</div><div class="col-span-2 text-right"><span class="tag pill-zero">No-show</span></div></div>
-      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Ishita Anand</div><div class="col-span-3 text-base font-medium">Yocket</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">0</div><div class="col-span-2 text-right"><span class="tag pill-zero">No-show</span></div></div>
-      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Ishiti Pandey</div><div class="col-span-3 text-base font-medium">Yocket</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">0</div><div class="col-span-2 text-right"><span class="tag pill-zero">No-show</span></div></div>
-      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Akhoury Pranjal Kumar</div><div class="col-span-3 text-base font-medium">Test Prep</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">0</div><div class="col-span-2 text-right"><span class="tag pill-zero">No-show</span></div></div>
-      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Ujjawal Garg</div><div class="col-span-3 text-base font-medium">Test Prep</div><div class="col-span-2 text-right num">8</div><div class="col-span-1 text-right num font-bold">0</div><div class="col-span-2 text-right"><span class="tag pill-zero">No-show</span></div></div>
-      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Swapnil Agarwal</div><div class="col-span-3 text-base font-medium">LeapScholar</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">0</div><div class="col-span-2 text-right"><span class="tag pill-zero">No-show</span></div></div>
-      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Ankit Sherke</div><div class="col-span-3 text-base font-medium">LeapScholar</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">0</div><div class="col-span-2 text-right"><span class="tag pill-zero">No-show</span></div></div>
-      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Akash Wadhwa</div><div class="col-span-3 text-base font-medium">LeapScholar</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">0</div><div class="col-span-2 text-right"><span class="tag pill-zero">No-show</span></div></div>
-      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Ratul CH</div><div class="col-span-3 text-base font-medium">LeapScholar</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">0</div><div class="col-span-2 text-right"><span class="tag pill-zero">No-show</span></div></div>
-      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Aniket Rajput</div><div class="col-span-3 text-base font-medium">Founder's Office</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">0</div><div class="col-span-2 text-right"><span class="tag pill-zero">No-show</span></div></div>
-      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Aashutosh Yadav</div><div class="col-span-3 text-base font-medium">Founder's Office</div><div class="col-span-2 text-right num">8</div><div class="col-span-1 text-right num font-bold">0</div><div class="col-span-2 text-right"><span class="tag pill-zero">No-show</span></div></div>
-      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Kashvi Gupta</div><div class="col-span-3 text-base font-medium">Founder's Office</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">0</div><div class="col-span-2 text-right"><span class="tag pill-zero">No-show</span></div></div>
-      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Abhishek Rai</div><div class="col-span-3 text-base font-medium">Founder's Office</div><div class="col-span-2 text-right num">8</div><div class="col-span-1 text-right num font-bold">0</div><div class="col-span-2 text-right"><span class="tag pill-zero">No-show</span></div></div>
-    </div>
-
-    <p class="text-xs mono opacity-100 mt-4">* Shruti Jain attempted 3 calls; 1 was substantively completed.</p>
-  </div>
-</section>
-
 <!-- ============ MANIFESTO / CLOSING ============ -->
 <section class="bg-ink text-[color:var(--paper)] relative overflow-hidden">
   <div class="blob bg-[color:var(--lime)]" style="width:600px;height:600px;right:-200px;top:-200px;opacity:.25;"></div>
@@ -700,39 +764,6 @@
   </div>
 </section>
 
-<!-- ============ METHODOLOGY ============ -->
-<section class="bg-cream border-t-2 border-ink">
-  <div class="max-w-[1280px] mx-auto px-6 py-16">
-    <details open class="chunk p-8 bg-paper">
-      <summary class="flex items-center justify-between">
-        <div>
-          <div class="kicker text-[color:var(--orange)]">Methodology · footnote</div>
-          <h3 class="serif font-black text-3xl mt-1">How we scored everything.</h3>
-        </div>
-        <span class="serif text-3xl">↓</span>
-      </summary>
-      <div class="grid md:grid-cols-2 gap-6 mt-8 text-sm leading-relaxed">
-        <div>
-          <div class="font-bold mb-2">Interview count = conversations, not files.</div>
-          <p class="opacity-100">Param's 1 PDF with 8 user profiles counted as 8 interviews. Ashwin's 1 deck with 14 sessions = 9 verified for ranking. Anuj's 4 PDFs = 4. Same method, regardless of how the submission was packaged.</p>
-        </div>
-        <div>
-          <div class="font-bold mb-2">Quality bar (primary).</div>
-          <p class="opacity-100">Surprising or non-obvious findings that change product thinking <em>plus</em> depth of conversation. We reward specificity over volume — but volume is the floor.</p>
-        </div>
-        <div>
-          <div class="font-bold mb-2">Lip-service flag.</div>
-          <p class="opacity-100">Generic insights that could apply to any product — no specificity to Leap, GeeBee, Yocket, Test Prep, or the actual user being interviewed — get demoted regardless of count.</p>
-        </div>
-        <div>
-          <div class="font-bold mb-2">Mis-attributions, dedup, over-quota.</div>
-          <p class="opacity-100">The "Patel" and "Rama" transcripts → Vijay Chauhan (the speaker). "Asish" file → Ashis Kumar Lenka. Duplicate hash-identical PDFs counted once. Over-quota credit honoured fully (Sehaj 10, Ashwin 9).</p>
-        </div>
-      </div>
-    </details>
-  </div>
-</section>
-
 <!-- ============ FOOTER ============ -->
 <footer class="bg-ink text-[color:var(--paper)]">
   <div class="max-w-[1280px] mx-auto px-6 py-10 flex flex-wrap items-center justify-between gap-6">
@@ -749,6 +780,56 @@
     <div class="text-xs opacity-100">Next session · <span class="text-[color:var(--lime)] font-semibold">29 May 2026</span></div>
   </div>
 </footer>
+
+
+<!-- ============ MODAL ============ -->
+<div id="modal-overlay" class="fixed inset-0 z-50 hidden items-center justify-center p-4 md:p-8" style="background:rgba(15,11,42,.72); backdrop-filter: blur(4px);" onclick="closeModal(event)">
+  <div id="modal-card" class="chunk bg-[color:var(--paper)] max-w-2xl w-full max-h-[88vh] overflow-y-auto p-7 md:p-9 relative" onclick="event.stopPropagation()">
+    <button onclick="closeModal()" aria-label="Close" class="absolute top-4 right-4 w-10 h-10 rounded-full bg-[color:var(--ink)] text-[color:var(--paper)] flex items-center justify-center hover:bg-[color:var(--orange)] transition-colors cursor-pointer">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+    <div id="modal-content"></div>
+  </div>
+</div>
+
+<script>
+  const PEOPLE = {"abhishek-m": {"name": "Abhishek M", "bu": "Founder's Office", "count": "4 / 3", "thesis": "Ad-targeting vs landing-page intent mismatch", "bullets": [["Sanmita", "Remembered the booking page but didn't book \"for no actual reason.\" The page produces zero friction and zero pull — nothing makes her feel she'd lose something by leaving."], ["Mohit", "High-intent dropout from a network-interrupted counsellor call. The counsellor never called back. Process gap, not product gap. Fix: auto-callback messaging + counsellor-initiated WhatsApp follow-up."], ["Bhumi", "Was searching for IELTS but signed up on the counselling page by mistake — she has a partner in Canada. Ad-targeting and landing-page intent contradict each other."], ["Daraksha", "Wants Dubai with \"no specific reason.\" Needs a path, not a menu. The app hands her course listings; she needs direction."]]}, "anirudh-amudan": {"name": "Anirudh Amudan", "bu": "LeapScholar · Airo", "count": "9 / 8", "thesis": "Stage-by-stage Airo drop-off RCA", "bullets": [["Teaser-page dropout", "Two users (Athita, Divya) didn't realise the form generates an AI call that produces the shortlist. Pure copy problem — already fixed in BAU."], ["Geronica", "Explicitly wants a human counsellor, not AI. Reframe Airo as \"preparation for your counsellor\" rather than a standalone agent."], ["Diwakar", "Got through most of the call but UI didn't register end-call. Pacing fixable in script; broken end-state damages trust."], ["Priyansh", "Call worked; report failed (low-QS universities, no fees). Drop-off moved from call layer to report layer — ranking calibration is next."], ["Chat preference", "Sanskruti and Payal independently said they'd prefer chat over voice. Recurring signal, warrants a formal product decision."]]}, "anuj-garg": {"name": "Anuj Garg", "bu": "GeeBee · Unisetu", "count": "4 / 3", "thesis": "Sharpest product-and-process synthesis across 4 power-user interviews", "bullets": [["Khushbu", "Rated Unisetu ABOVE ApplyBoard on features and ease of use. Positive competitive narrative the field team can lean into."], ["WhatsApp is the work", "Khushbu, Dheeraj, and the Canada ops team all said WhatsApp is where the real work happens — document handoffs, status comms, inter-team coordination. Platform is system of record; WhatsApp is system of work."], ["Uni Bestie / ZeroGPT", "Dheeraj uses Claude + ZeroGPT + Undetectable.ai to produce SOPs that pass AI detection. Faster than the in-portal SOP feature. Compliance flag worth raising."], ["Pooja Karalkar's team", "Processes ~50% of daily Canada applications (~20 of 40) because submissions allow missing passport/contact details. Making fields mandatory is a one-line policy fix with revenue impact."]]}, "aratrika-roy": {"name": "Aratrika Roy", "bu": "GeeBee · Unisetu", "count": "3 / 3", "thesis": "Operational users want basics fixed before novelty", "bullets": [["Safleen", "Email notifications broke 2-3 months ago — she preferred fixing notifications over a mobile app. Clarifying signal about what operational users actually need."], ["Application-fee waiver", "Safleen explicitly moved applications to competitor portals when GB showed fees and competitor showed a waiver. Concrete, recoverable."], ["Javika", "AI mock interview rated as the standout feature — \"highly valuable and impactful.\" A real differentiator the field doesn't talk about enough."], ["Acentrik team", "Multiple users unaware Info Hub, deadline tracker, scholarship finder, video guides exist. Discoverability gap is as costly as the missing features themselves."]]}, "ashita-jain": {"name": "Ashita Jain", "bu": "GeeBee · 🏆 BU Winner", "count": "3 / 3", "thesis": "\"Commission Parity Overrides Product Quality.\"", "bullets": [["Muralikrishna's commission math", "GB offers 18.5% on Greenwich; KAC offers 22.5% plus volume bonuses at 50-60 enrolments/year. Same product, 4% delta routes the deal."], ["Data accuracy is a trust crisis", "All 3 CSPs cross-check GB's data with KAC or university websites. Two found discrepancies (deadlines, intake status). Reframe: stop the credibility erosion."], ["Loan-university compatibility", "8 of 10 students depend on loans. Some universities aren't accepted by major providers (Avance, Auxilla). Surfacing this at offer stage moves offer-to-payment conversion."], ["Venugopal's USA Health PG search", "Returned Master of MBA Finance / MBA Healthcare Management when he wanted health PG. Search-relevance failure at the moment of intent."], ["Omprakash positive", "\"The platform asks only essential student info.\" Rare positive worth amplifying — most CSPs complain about over-asking."]]}, "ashwin-susarla": {"name": "Ashwin Susarla", "bu": "Founder's Office · 🏆 Overall Winner", "count": "9 / 8", "thesis": "\"Topmate works precisely because it stays out of the way.\"", "bullets": [["1:1 exclusivity is the product", "Anushree's student left a session early to dodge the LS rep at the end — \"looked like an advertisement.\" Two mentors independently confirmed students share less (CGPA, finances) with a host present."], ["Mentor-as-referral", "Ananya was sent Ayushi's booking link directly. The platform facilitated the connection but never owned the discovery."], ["Cultural affinity matching", "Rizana picked Reema specifically — both Malayali, Reema a Chevening winner. Match by lived identity, not destination or skill."], ["Post-admit segment", "Avinandita had a Birmingham offer and needed accommodation, part-time work, SOP guidance. LS serves none of that today."], ["UG is Google-Sheet-first", "Archana runs 48 students grades 8-12 entirely on Sheets — 60 tasks/year per Grade 10, planned quarterly. Any UG dashboard that doesn't mirror this fails adoption."]]}, "heena-makhija": {"name": "Heena Makhija", "bu": "LeapScholar · 🏆 BU Winner", "count": "3 / 3", "thesis": "\"Individual counsellors are the entire product.\"", "bullets": [["Named counsellors everywhere", "Bharat and Sharat named repeatedly. Charvi praised unprompted for German teaching. Every conversion was attributed to a human, not a feature."], ["All 3 families cross-check", "Vasantha, Kevin, Ram families independently run shortlists through ChatGPT or Google. That's not due diligence — it's a trust gap. Share the reasoning, not the sorted list."], ["Kashish inconsistency", "Same counsellor, opposite student experiences: Ram very positive, Kevin needed rescuing by Harish. Student-dependent behaviour or genuinely inconsistent — needs a managerial audit."], ["IELTS → Germany funnel", "Vasantha's son entered LS via IELTS prep, converted to Germany counselling. The IELTS-to-Germany playbook is replicable as BAU."], ["12 public universities promise", "Ram chose LS over Yes Germany and Uni Scholar specifically for public-university coverage. If the final shortlist contains private universities, trust collapses immediately."]]}, "param-thakkar": {"name": "Param Thakkar", "bu": "Founder's Office · 🥈 Runner-up", "count": "8 / 8", "thesis": "\"The app isn't built for Stage 1.\"", "bullets": [["App not built for Stage 1", "Across 8 calls only 1-2 users had made the go/no-go decision. The product flow assumes the decision is made. Stage 1 users need a case for going abroad, not a list of courses."], ["Family conversation gap", "Kaustubh: \"I can't just go and say ki bahar padhne jaana hai.\" Users need an ROI argument — total cost, expected salary, loan EMI, break-even — packaged for parents."], ["Content gaps fail high-intent users", "Faiz had country (France) and course (MiM) decided. Both shortlist/explore AND Arya returned zero results. Filter-relaxation doesn't help if the catalogue is empty."], ["Friend referrals ≠ intent", "Aniket downloaded the app on a friend's recommendation — for English practice. Activation metrics on referral users like him are misleading."], ["Two hard bugs from Ashish", "Shortlist persistence failure (generate → lock phone → return to empty state). Counsellor-shortlisted courses not visible in the user's app. Bug 1 was fixed post-call."]]}, "sehaj-bajaj": {"name": "Sehaj Bajaj", "bu": "Founder's Office", "count": "10 / 8", "thesis": "10 conversations with the sharpest catalogue insights of the cycle", "bullets": [["Josh on search credibility", "Saw the same courses in Explore but got zero results in Shortlist for identical filters. Attributed it to \"a defective search engine\" — far more damaging than a true empty state."], ["Gautham on Germany", "Shortlist returned only private universities; tuition displayed as full annual rather than semester contribution. Misrepresents the German study-abroad landscape entirely."], ["Sanchita on positioning", "MIT-aspirant got nothing on LOR, SOP, extracurricular strategy. Course discovery is solved; admissions positioning is a complete gap for the high-value segment."], ["Vikas on Chat-as-Home", "Arrived via Google ad with shortlist intent; Chat-as-Home was confusing. Acquisition-to-activation leak — search-ad traffic likely has higher shortlist intent than the architecture assumes."], ["Madiha on scholarship", "For her segment, scholarship isn't a \"nice to have\" — it's the binary decision factor. The app shows tuition without scholarship overlay = an incomplete picture."]]}, "shiksha-mishra": {"name": "Shiksha Mishra", "bu": "Founder's Office · Career Bot", "count": "8 / 8", "thesis": "Most rigorous bug-level product testing of the cycle", "bullets": [["Resume parsing failures", "Ayush's 3-year role logged as 1y 2m. Namit's college positions tagged as full-time work. Old internships prioritised over current roles. Foundational error compounding downstream."], ["Unexplained CTC cap", "Anush wanted 45 LPA, system capped at 26 LPA without explanation. Same frustration with Ayush, Namit until the moderator clarified market-standard. Cap is fine; silence is not."], ["Seniority mismatches", "Pranav (mid-level switcher) got Lead/Senior roles. Sarthak (10-15+ yrs) had no senior filters. Namit selected \"fresher\" but got jobs needing 6-12 yrs experience."], ["Salary band inconsistencies", "Director of Operations suggested with unrealistically low band. Inputted ₹10-12.5L expected CTC but job portal showed ₹2-3L roles."], ["Namit positioning insight", "\"Better than raw LLMs\" — preferred this platform over Claude because it avoids hallucination. The Career Bot wins by being grounded, not smarter. Worth defending and instrumenting."]]}};
+  function openModal(slug){
+    const p = PEOPLE[slug];
+    if(!p) return;
+    const bulletsHtml = p.bullets.map(([label, body], i) => `
+      <div class="chunk-xs p-4 bg-[color:var(--paper)]" style="background:#FAF6EE;">
+        <div class="flex items-start gap-3">
+          <span class="serif font-black text-2xl text-[color:var(--orange)] leading-none num">${String(i+1).padStart(2,'0')}</span>
+          <div>
+            <div class="font-bold text-[15px] text-[color:var(--ink)]">${label}</div>
+            <p class="text-sm mt-1 text-[color:var(--ink)]" style="font-weight:500;">${body}</p>
+          </div>
+        </div>
+      </div>`).join('');
+    document.getElementById('modal-content').innerHTML = `
+      <div class="kicker text-[color:var(--orange)] mb-2">Deep dive · ${p.bu}</div>
+      <h3 class="serif font-black text-4xl md:text-5xl leading-none">${p.name}</h3>
+      <div class="mt-3 flex items-center gap-3 text-sm font-semibold">
+        <span class="tag bg-[color:var(--lime)]">${p.count} interviews</span>
+      </div>
+      <p class="serif italic text-xl md:text-2xl mt-5 leading-snug text-[color:var(--ink)]">${p.thesis}</p>
+      <div class="mt-6 space-y-3">${bulletsHtml}</div>
+    `;
+    const ov = document.getElementById('modal-overlay');
+    ov.classList.remove('hidden');
+    ov.classList.add('flex');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal(e){
+    if(e && e.target !== e.currentTarget && e.type === 'click') return;
+    const ov = document.getElementById('modal-overlay');
+    ov.classList.add('hidden');
+    ov.classList.remove('flex');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', e => { if(e.key === 'Escape') closeModal(); });
+</script>
 
 </body>
 </html>
