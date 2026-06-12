@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Show & Tell · May 2026 · Leap PM User Interviews</title>
+<title>Listening Lap · Leap PM User Interviews · May–Jun 2026</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -84,6 +84,15 @@
   .on-color { color: var(--ink); font-weight: 500; }
   .meta { color: var(--ink); font-weight: 600; font-size: 11px; letter-spacing:.14em; text-transform:uppercase; }
   .swatch { width:14px; height:14px; border-radius:4px; border:1.5px solid var(--ink); display:inline-block; }
+
+  /* tab pills */
+  .tab-pill { color: var(--ink); cursor: pointer; }
+  .tab-pill[aria-selected="true"] { background: var(--ink); color: var(--paper); }
+  .tab-pill:hover:not([aria-selected="true"]) { background: rgba(27,19,64,.08); }
+  /* month switching */
+  .month-block { display: block; }
+  .month-block[hidden] { display: none !important; }
+
 </style>
 </head>
 <body class="overflow-x-hidden">
@@ -91,9 +100,9 @@
 <!-- ============ TOP STRIP ============ -->
 <div class="bg-ink text-[color:var(--paper)] py-2.5">
   <div class="max-w-[1280px] mx-auto px-6 flex items-center justify-between text-[11px] mono tracking-wider uppercase">
-    <span class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-[color:var(--lime)] inline-block"></span>Fortnightly Ritual · Cycle 03</span>
+    <span class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-[color:var(--lime)] inline-block"></span>Fortnightly Ritual · <span data-cycle-text>Cycle 04</span></span>
     <span class="hidden md:inline">Internal · Product · Business · Engineering</span>
-    <span>15 May 2026</span>
+    <span data-date-text>12 Jun 2026</span>
   </div>
 </div>
 
@@ -116,13 +125,14 @@
       <a href="#bus" class="hover:text-[color:var(--orange)]">BU Champions</a>
       <a href="#winner" class="hover:text-[color:var(--orange)]">Overall Winner</a>
     </nav>
-    <div class="hidden md:flex items-center gap-3 text-xs mono uppercase tracking-wider">
-      <span class="w-2 h-2 rounded-full bg-orange inline-block animate-pulse"></span>
-      <span>Cycle 03 · Live</span>
+    <div class="flex items-center gap-1.5 p-1 rounded-full border-2 border-ink bg-paper" role="tablist" aria-label="Cycle">
+      <button type="button" data-tab="may" onclick="switchMonth('may')" class="tab-pill px-4 py-1.5 rounded-full text-xs mono uppercase tracking-wider font-bold transition-colors">May · 03</button>
+      <button type="button" data-tab="june" onclick="switchMonth('june')" class="tab-pill px-4 py-1.5 rounded-full text-xs mono uppercase tracking-wider font-bold transition-colors">June · 04</button>
     </div>
   </div>
 </header>
 
+<div class="month-block" data-month="may">
 <!-- ============ HERO ============ -->
 <section class="relative overflow-hidden border-b-2 border-ink">
   <div class="blob bg-[color:var(--lime)]" style="width:520px;height:520px;left:-120px;top:-120px;"></div>
@@ -193,6 +203,81 @@
   </div>
 </section>
 
+
+</div>
+<div class="month-block" data-month="june">
+<!-- ============ HERO (JUNE) ============ -->
+<section class="relative overflow-hidden border-b-2 border-ink">
+  <div class="blob bg-[color:var(--lime)]" style="width:520px;height:520px;left:-120px;top:-120px;"></div>
+  <div class="blob bg-[color:var(--orange)]" style="width:460px;height:460px;right:-100px;top:120px;opacity:.45;"></div>
+  <div class="absolute inset-0 grain pointer-events-none"></div>
+
+  <div class="relative max-w-[1280px] mx-auto px-6 pt-16 pb-24">
+    <div class="flex items-center gap-3 mb-8 flex-wrap">
+      <span class="tag bg-paper"><span class="w-1.5 h-1.5 rounded-full bg-[color:var(--orange)]"></span>Live · Cycle 04 results</span>
+      <span class="tag bg-paper">144 sessions · 20 submitters</span>
+      <span class="tag bg-paper">4 business units active</span>
+    </div>
+
+    <h1 class="serif font-black tracking-tight leading-[0.92] text-[clamp(56px,9vw,148px)]">
+      Talk to users.<br/>
+      <span class="relative inline-block">
+        <span class="relative z-10">Every.</span>
+        <span class="absolute inset-x-0 bottom-2 h-5 bg-[color:var(--lime)] -z-0 rounded-sm"></span>
+      </span>
+      <span class="text-[color:var(--orange)] italic">Single.</span>
+      <span class="relative inline-block">
+        <span class="relative z-10">Week.</span>
+      </span>
+    </h1>
+    <div class="mt-3 kicker text-[color:var(--orange)]">June 2026 · Cycle 04</div>
+
+    <div class="mt-10 grid md:grid-cols-12 gap-10 items-end">
+      <p class="md:col-span-7 text-lg md:text-xl leading-relaxed max-w-2xl">
+        Over four weeks, 20 submitting units logged <span class="font-semibold">144 distinct user conversations</span> — and one of them mapped the entire top-of-funnel as an intent taxonomy. They surfaced a counselling integrity crisis, a Proof-of-Funds visa-rejection pattern, a tutor-continuity trust break, and one implicit persona that silently fails everyone else.
+        <span class="font-semibold">This is what they heard. This is who heard it best.</span>
+      </p>
+      <div class="md:col-span-5 grid grid-cols-3 gap-3">
+        <div class="chunk-sm bg-cream p-4">
+          <div class="serif font-black text-4xl num">144</div>
+          <div class="text-[11px] mono uppercase tracking-wider mt-1">User calls</div>
+        </div>
+        <div class="chunk-sm bg-[color:var(--lime)] p-4">
+          <div class="serif font-black text-4xl num">16</div>
+          <div class="text-[11px] mono uppercase tracking-wider mt-1">Great quality</div>
+        </div>
+        <div class="chunk-sm bg-orange text-white p-4">
+          <div class="serif font-black text-4xl num">12</div>
+          <div class="text-[11px] mono uppercase tracking-wider mt-1">No-shows</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ticker -->
+  <div class="bg-ink text-[color:var(--paper)] border-y-2 border-ink overflow-hidden marquee-mask">
+    <div class="ticker flex gap-10 whitespace-nowrap py-4 serif italic text-xl md:text-2xl">
+      <span>Sehaj · Overall Winner ·</span>
+      <span class="text-[color:var(--lime)]">32 of 16 interviews ·</span>
+      <span>Bishal Mukherjee · Yocket Champion ·</span>
+      <span class="text-[color:var(--orange)]">"Loan sanctioned ≠ visa granted" ·</span>
+      <span>Akash Wadhwa · LeapScholar Champion ·</span>
+      <span class="text-[color:var(--lime)]">"Churn is integrity, not advice quality" ·</span>
+      <span>Vijay Chauhan · Test Prep Champion ·</span>
+      <span class="text-[color:var(--orange)]">Vishal & Aashutosh · Runner-up ·</span>
+      <span>Sehaj · Overall Winner ·</span>
+      <span class="text-[color:var(--lime)]">32 of 16 interviews ·</span>
+      <span>Bishal Mukherjee · Yocket Champion ·</span>
+      <span class="text-[color:var(--orange)]">"Loan sanctioned ≠ visa granted" ·</span>
+      <span>Akash Wadhwa · LeapScholar Champion ·</span>
+      <span class="text-[color:var(--lime)]">"Churn is integrity, not advice quality" ·</span>
+      <span>Vijay Chauhan · Test Prep Champion ·</span>
+      <span class="text-[color:var(--orange)]">Vishal & Aashutosh · Runner-up ·</span>
+    </div>
+  </div>
+</section>
+
+</div>
 <!-- ============ WHY THIS MATTERS ============ -->
 <section class="border-b-2 border-ink">
   <div class="max-w-[1280px] mx-auto px-6 py-14 grid md:grid-cols-12 gap-8 items-start">
@@ -217,6 +302,7 @@
   </div>
 </section>
 
+<div class="month-block" data-month="may">
 <!-- ============ METHODOLOGY ============ -->
 <section class="bg-cream border-t-2 border-ink">
   <div class="max-w-[1280px] mx-auto px-6 py-16">
@@ -250,6 +336,52 @@
   </div>
 </section>
 
+
+</div>
+<div class="month-block" data-month="june">
+<!-- ============ METHODOLOGY (JUNE) ============ -->
+<section class="bg-cream border-t-2 border-ink">
+  <div class="max-w-[1280px] mx-auto px-6 py-16">
+    <details open class="chunk p-8 bg-paper">
+      <summary class="flex items-center justify-between">
+        <div>
+          <div class="kicker text-[color:var(--orange)]">Methodology · June 2026</div>
+          <h3 class="serif font-black text-3xl mt-1">How we scored this cycle.</h3>
+        </div>
+        <span class="serif text-3xl">↓</span>
+      </summary>
+      <div class="grid md:grid-cols-2 gap-6 mt-8 text-sm leading-relaxed">
+        <div>
+          <div class="font-bold mb-2">Multi-cycle merge.</div>
+          <p>The two biweekly workbooks (May 16–30 and May 30–Jun 12) were merged into one monthly review. Quota is scored against the whole-month combined total per submitting unit.</p>
+        </div>
+        <div>
+          <div class="font-bold mb-2">Pair units credited as one.</div>
+          <p>Three "A &amp; B" pairs — Param &amp; Sehaj, Vishal &amp; Aashutosh, Ashita &amp; Anuj — each counted as a single unit against a combined quota. Sehaj's solo cycle-1 tab (17) plus the "Sehaj &amp; Param" cycle-2 tab (15) rolls up to 32.</p>
+        </div>
+        <div>
+          <div class="font-bold mb-2">Distinct conversations, not row count.</div>
+          <p>Autofill-blank template rows were filtered out. Aniket's ISL-generator tabs showed ~39+~10 rows; after de-duplication only ~21 distinct counsellor sessions remained. Sample/master-sheet rows ignored (Kaustubh Arora row credited to no one).</p>
+        </div>
+        <div>
+          <div class="font-bold mb-2">Quality bar (primary).</div>
+          <p>Surprising or non-obvious findings that change product thinking — specific to the actual product and users. Volume is the floor; specificity is the ceiling.</p>
+        </div>
+        <div>
+          <div class="font-bold mb-2">Lip-service flag.</div>
+          <p>Generic insights applicable to any product, or volume without conversation depth (QA logs). Aniket's ISL-generator tabs hit quota many times over but were flagged on depth — no transcripts, identical persona on every row.</p>
+        </div>
+        <div>
+          <div class="font-bold mb-2">Spelling-variant re-maps.</div>
+          <p>Silent normalisation: "Debasish" → "Debashis"; "Ashis" → "Asish"; "Ankit S" → "Ankit Sherke"; "Sehaj Bajaj" + "Param Thakkar" → "Param &amp; Sehaj" pair unit.</p>
+        </div>
+      </div>
+    </details>
+  </div>
+</section>
+
+</div>
+<div class="month-block" data-month="may">
 <!-- ============ QUOTA BOARD ============ -->
 <section id="board" class="bg-paper border-t-2 border-ink relative">
   <div class="max-w-[1280px] mx-auto px-6 py-20">
@@ -319,6 +451,43 @@
   </div>
 </section>
 
+
+</div>
+<div class="month-block" data-month="june">
+<!-- ============ QUOTA BOARD (JUNE) ============ -->
+<section id="board-june" class="bg-paper border-t-2 border-ink relative">
+  <div class="max-w-[1280px] mx-auto px-6 py-20">
+    <div class="flex items-end justify-between mb-10 flex-wrap gap-4">
+      <div>
+        <div class="kicker text-[color:var(--orange)]">The full standings</div>
+        <h2 class="serif font-black text-5xl md:text-6xl mt-2 leading-none">Quota board.</h2>
+        <p class="mt-3 max-w-2xl">32 units on the roster (35 individuals across 3 pair-credit pairs). 20 submitted. 12 didn't show up. The board is the board — sorted by status, then quota.</p>
+      </div>
+      <div class="flex flex-wrap items-center gap-5 text-xs font-semibold">
+        <span class="flex items-center gap-2"><span class="swatch" style="background:var(--lime);"></span>Exceeded</span>
+        <span class="flex items-center gap-2"><span class="swatch" style="background:#E7E1FE;"></span>Met</span>
+        <span class="flex items-center gap-2"><span class="swatch" style="background:#FFD9C8;"></span>Just short</span>
+        <span class="flex items-center gap-2"><span class="swatch" style="background:#1B1340;"></span>No submission</span>
+      </div>
+    </div>
+
+    <div class="chunk bg-paper overflow-hidden">
+      <div class="grid grid-cols-12 px-6 py-4 bg-ink text-[color:var(--paper)] text-[11px] mono uppercase tracking-wider">
+        <div class="col-span-4">Name (unit)</div>
+        <div class="col-span-3">BU</div>
+        <div class="col-span-2 text-right">Quota</div>
+        <div class="col-span-1 text-right">Done</div>
+        <div class="col-span-2 text-right">Status</div>
+      </div>
+      <div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Param & Sehaj 🏆 Overall</div><div class="col-span-3 text-base font-medium">Founder's Office</div><div class="col-span-2 text-right num">16</div><div class="col-span-1 text-right num font-bold">32</div><div class="col-span-2 text-right"><span class="tag pill-pass">Exceeded</span></div></div><div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Vishal & Aashutosh 🥈 Runner-up</div><div class="col-span-3 text-base font-medium">Founder's Office</div><div class="col-span-2 text-right num">16</div><div class="col-span-1 text-right num font-bold">19</div><div class="col-span-2 text-right"><span class="tag pill-pass">Exceeded</span></div></div><div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Subham Samal</div><div class="col-span-3 text-base font-medium">Founder's Office</div><div class="col-span-2 text-right num">8</div><div class="col-span-1 text-right num font-bold">9</div><div class="col-span-2 text-right"><span class="tag pill-pass">Exceeded</span></div></div><div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Kashvi Gupta</div><div class="col-span-3 text-base font-medium">Founder's Office</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">6</div><div class="col-span-2 text-right"><span class="tag pill-pass">Exceeded</span></div></div><div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Akash Wadhwa 🏆 BU</div><div class="col-span-3 text-base font-medium">LeapScholar</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">5</div><div class="col-span-2 text-right"><span class="tag pill-pass">Exceeded</span></div></div><div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Asish Kumar Lenka</div><div class="col-span-3 text-base font-medium">LeapScholar</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">5</div><div class="col-span-2 text-right"><span class="tag pill-pass">Exceeded</span></div></div><div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Bishal Mukherjee 🏆 BU</div><div class="col-span-3 text-base font-medium">Yocket</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">4</div><div class="col-span-2 text-right"><span class="tag pill-pass">Exceeded</span></div></div><div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Siddhant Maruti</div><div class="col-span-3 text-base font-medium">LeapScholar</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">4</div><div class="col-span-2 text-right"><span class="tag pill-pass">Exceeded</span></div></div><div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Debashis Sahoo</div><div class="col-span-3 text-base font-medium">LeapScholar</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">4</div><div class="col-span-2 text-right"><span class="tag pill-pass">Exceeded</span></div></div><div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Divakaran M</div><div class="col-span-3 text-base font-medium">LeapScholar</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">4</div><div class="col-span-2 text-right"><span class="tag pill-pass">Exceeded</span></div></div><div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Shruti Jain</div><div class="col-span-3 text-base font-medium">LeapScholar</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">4</div><div class="col-span-2 text-right"><span class="tag pill-pass">Exceeded</span></div></div><div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Aniket Rajput*</div><div class="col-span-3 text-base font-medium">Founder's Office</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">21</div><div class="col-span-2 text-right"><span class="tag pill-pass">Exceeded</span></div></div><div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Ashwin Susarla</div><div class="col-span-3 text-base font-medium">Founder's Office</div><div class="col-span-2 text-right num">8</div><div class="col-span-1 text-right num font-bold">8</div><div class="col-span-2 text-right"><span class="tag pill-met">Met</span></div></div><div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Heena Makhija</div><div class="col-span-3 text-base font-medium">LeapScholar</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">3</div><div class="col-span-2 text-right"><span class="tag pill-met">Met</span></div></div><div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Rajgeetha Balamurali</div><div class="col-span-3 text-base font-medium">Test Prep</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">3</div><div class="col-span-2 text-right"><span class="tag pill-met">Met</span></div></div><div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Ankit Sherke</div><div class="col-span-3 text-base font-medium">LeapScholar</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">3</div><div class="col-span-2 text-right"><span class="tag pill-met">Met</span></div></div><div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Vijay Chauhan 🏆 BU</div><div class="col-span-3 text-base font-medium">Test Prep</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">3</div><div class="col-span-2 text-right"><span class="tag pill-met">Met</span></div></div><div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Swapnil Agarwal</div><div class="col-span-3 text-base font-medium">LeapScholar</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">3</div><div class="col-span-2 text-right"><span class="tag pill-met">Met</span></div></div><div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Ratul CH</div><div class="col-span-3 text-base font-medium">LeapScholar</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">2</div><div class="col-span-2 text-right"><span class="tag pill-miss">Just short</span></div></div><div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Pratyush Raju Paka</div><div class="col-span-3 text-base font-medium">Test Prep</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">2</div><div class="col-span-2 text-right"><span class="tag pill-miss">Just short</span></div></div><div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Shivam Kumar</div><div class="col-span-3 text-base font-medium">LeapScholar</div><div class="col-span-2 text-right num">8</div><div class="col-span-1 text-right num font-bold">0</div><div class="col-span-2 text-right"><span class="tag pill-zero">No-show</span></div></div><div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Anirudh Amudan</div><div class="col-span-3 text-base font-medium">LeapScholar</div><div class="col-span-2 text-right num">8</div><div class="col-span-1 text-right num font-bold">0</div><div class="col-span-2 text-right"><span class="tag pill-zero">No-show</span></div></div><div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Gaurav Kumar</div><div class="col-span-3 text-base font-medium">LeapScholar</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">0</div><div class="col-span-2 text-right"><span class="tag pill-zero">No-show</span></div></div><div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Ishita Anand</div><div class="col-span-3 text-base font-medium">Yocket</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">0</div><div class="col-span-2 text-right"><span class="tag pill-zero">No-show</span></div></div><div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Ishiti Pandey</div><div class="col-span-3 text-base font-medium">Yocket</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">0</div><div class="col-span-2 text-right"><span class="tag pill-zero">No-show</span></div></div><div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Ashita & Anuj</div><div class="col-span-3 text-base font-medium">GeeBee</div><div class="col-span-2 text-right num">6</div><div class="col-span-1 text-right num font-bold">0</div><div class="col-span-2 text-right"><span class="tag pill-zero">No-show</span></div></div><div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Aratrika Roy</div><div class="col-span-3 text-base font-medium">GeeBee</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">0</div><div class="col-span-2 text-right"><span class="tag pill-zero">No-show</span></div></div><div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Akhoury Pranjal Kumar</div><div class="col-span-3 text-base font-medium">Test Prep</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">0</div><div class="col-span-2 text-right"><span class="tag pill-zero">No-show</span></div></div><div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Ujjawal Garg</div><div class="col-span-3 text-base font-medium">Test Prep</div><div class="col-span-2 text-right num">8</div><div class="col-span-1 text-right num font-bold">0</div><div class="col-span-2 text-right"><span class="tag pill-zero">No-show</span></div></div><div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Abhishek Rai</div><div class="col-span-3 text-base font-medium">Founder's Office</div><div class="col-span-2 text-right num">8</div><div class="col-span-1 text-right num font-bold">0</div><div class="col-span-2 text-right"><span class="tag pill-zero">No-show</span></div></div><div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Abhishek M</div><div class="col-span-3 text-base font-medium">Founder's Office</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">0</div><div class="col-span-2 text-right"><span class="tag pill-zero">No-show</span></div></div><div class="row grid grid-cols-12 qcell"><div class="col-span-4 font-semibold">Lakshmikant</div><div class="col-span-3 text-base font-medium">Founder's Office</div><div class="col-span-2 text-right num">3</div><div class="col-span-1 text-right num font-bold">0</div><div class="col-span-2 text-right"><span class="tag pill-zero">No-show</span></div></div>
+    </div>
+
+    <p class="text-xs mono mt-4">* Aniket Rajput's 21 rows are a QA log (identical persona, no transcripts) — numerically over quota, flagged on depth in the methodology.</p>
+  </div>
+</section>
+
+</div>
+<div class="month-block" data-month="may">
 <!-- ============ USER VOICES (PULL QUOTES) ============ -->
 <section id="voices" class="bg-cream border-b-2 border-ink relative overflow-hidden">
   <div class="absolute inset-0 grain pointer-events-none"></div>
@@ -395,6 +564,87 @@
   </div>
 </section>
 
+
+</div>
+<div class="month-block" data-month="june">
+<!-- ============ USER VOICES (JUNE) ============ -->
+<section id="voices-june" class="bg-cream border-b-2 border-ink relative overflow-hidden">
+  <div class="absolute inset-0 grain pointer-events-none"></div>
+  <div class="relative max-w-[1280px] mx-auto px-6 py-20">
+    <div class="kicker text-[color:var(--orange)]">User voices · unfiltered</div>
+    <h2 class="serif font-black text-5xl md:text-6xl mt-2 mb-3 leading-none">What real users said.</h2>
+    <p class="max-w-2xl mb-12">Three of the sharpest verbatim lines this cycle, and four mini-quotes that map directly to product decisions. None of these came from a survey or a sprint review.</p>
+
+    <div class="grid md:grid-cols-12 gap-6">
+      <!-- Anmol (the Hinglish promise-decay line) -->
+      <figure class="md:col-span-7 chunk p-10 bg-paper relative overflow-hidden">
+        <span class="quote-mark absolute top-2 left-4 select-none">"</span>
+        <blockquote class="serif text-3xl md:text-4xl font-medium leading-[1.15] relative">
+          Mera IELTS ka exam bhi schedule karwana tha Pooja ke through. Woh bhi ab tak…
+        </blockquote>
+        <figcaption class="mt-6 flex items-center gap-4">
+          <div class="w-12 h-12 rounded-full bg-orange flex items-center justify-center text-white serif font-black text-xl">A</div>
+          <div>
+            <div class="font-bold">Anmol</div>
+            <div class="text-xs mono uppercase tracking-wider">User · Bikaner · via Swapnil Agarwal</div>
+          </div>
+          <span class="ml-auto tag bg-[color:var(--lime)]">Promise-decay loop</span>
+        </figcaption>
+      </figure>
+
+      <!-- Niyati - integrity churn -->
+      <figure class="md:col-span-5 chunk p-8 bg-ink text-[color:var(--paper)] relative overflow-hidden">
+        <blockquote class="serif text-2xl md:text-3xl font-medium leading-snug">
+          She didn't say <span class="text-[color:var(--lime)] italic">"bad advice."</span> She said <span class="text-[color:var(--lime)] italic">"didn't deliver on promises."</span>
+        </blockquote>
+        <figcaption class="mt-6 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-[color:var(--lime)] flex items-center justify-center text-[color:var(--ink)] serif font-black">N</div>
+          <div>
+            <div class="font-bold">Niyati (BDS/NHS)</div>
+            <div class="text-[11px] mono uppercase tracking-wider">Churn case · via Akash Wadhwa</div>
+          </div>
+        </figcaption>
+      </figure>
+
+      <!-- Nicholas - masterclass framing -->
+      <figure class="md:col-span-5 chunk p-8 bg-[color:var(--lime)] relative overflow-hidden">
+        <blockquote class="serif text-2xl md:text-3xl font-medium leading-snug">
+          I wasn't aware that they were going to be advising such a course. I expected exam tips.
+        </blockquote>
+        <figcaption class="mt-6 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-ink flex items-center justify-center text-[color:var(--lime)] serif font-black">N</div>
+          <div>
+            <div class="font-bold">Nicholas</div>
+            <div class="text-[11px] mono uppercase tracking-wider">LIY masterclass · via Pratyush</div>
+          </div>
+        </figcaption>
+      </figure>
+
+      <!-- Mini quotes -->
+      <div class="md:col-span-7 grid sm:grid-cols-2 gap-4">
+        <figure class="chunk-sm p-5 bg-paper">
+          <blockquote class="serif italic text-lg leading-snug">"My loan was sanctioned. My visa was rejected on Proof of Funds."</blockquote>
+          <figcaption class="text-[11px] mono uppercase tracking-wider mt-3">Gaurav Jadaun · via Bishal</figcaption>
+        </figure>
+        <figure class="chunk-sm p-5 bg-paper">
+          <blockquote class="serif italic text-lg leading-snug">"I registered Germany — it was the only option visible on the form."</blockquote>
+          <figcaption class="text-[11px] mono uppercase tracking-wider mt-3">Mithra · via Heena</figcaption>
+        </figure>
+        <figure class="chunk-sm p-5 bg-paper">
+          <blockquote class="serif italic text-lg leading-snug">"I downloaded Leap to get an IELTS prep app."</blockquote>
+          <figcaption class="text-[11px] mono uppercase tracking-wider mt-3">Rutuja · via Sehaj</figcaption>
+        </figure>
+        <figure class="chunk-sm p-5 bg-paper">
+          <blockquote class="serif italic text-lg leading-snug">"I'm on a UK student visa — but the bot kept telling me about applying from India."</blockquote>
+          <figcaption class="text-[11px] mono uppercase tracking-wider mt-3">Sakshi · via Vishal &amp; Aashutosh</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+<div class="month-block" data-month="may">
 <!-- ============ ROLL CALL ============ -->
 <section id="roll" class="bg-cream border-b-2 border-ink">
   <div class="max-w-[1280px] mx-auto px-6 py-20">
@@ -505,6 +755,175 @@
   </div>
 </section>
 
+
+</div>
+<div class="month-block" data-month="june">
+<!-- ============ ROLL CALL (JUNE) ============ -->
+<section id="roll-june" class="bg-cream border-b-2 border-ink">
+  <div class="max-w-[1280px] mx-auto px-6 py-20">
+    <div class="flex items-end justify-between mb-10 flex-wrap gap-4">
+      <div>
+        <div class="kicker text-[color:var(--orange)]">Great quality roll-call</div>
+        <h2 class="serif font-black text-5xl md:text-6xl mt-2 leading-none">The honour roll.</h2>
+        <p class="mt-3 max-w-2xl">Met or exceeded quota AND produced insights specific to the actual product and users. Sixteen submitting units cleared the bar — the biggest cohort yet.</p>
+      </div>
+      <div class="flex items-center gap-5 text-xs font-semibold">
+        <span class="flex items-center gap-2"><span class="swatch" style="background:var(--lime);"></span>Exceeded</span>
+        <span class="flex items-center gap-2"><span class="swatch" style="background:var(--paper);"></span>Met</span>
+      </div>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+      <button type="button" onclick="openModal('june-akash-wadhwa')" class="text-left chunk-sm p-5 bg-[color:var(--lime)] hover:-translate-y-1 hover:shadow-[5px_8px_0_0_var(--ink)] transition-all duration-150 cursor-pointer">
+        <div class="flex items-center justify-between gap-2"><span class="tag bg-[color:var(--lime)] font-bold">5 / 3</span><span class="kicker text-right">🏆 BU Winner</span></div>
+        <h4 class="serif font-bold text-2xl mt-3 leading-tight">Akash Wadhwa</h4>
+        <p class="text-sm mt-2 font-medium">"Churn is an integrity problem, not a quality one."</p>
+        <div class="mt-3 flex items-center gap-2 text-[11px] mono uppercase tracking-wider font-semibold">
+          <span>Open insights</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </div>
+      </button>
+      <button type="button" onclick="openModal('june-ankit-sherke')" class="text-left chunk-sm p-5 bg-paper hover:-translate-y-1 hover:shadow-[5px_8px_0_0_var(--ink)] transition-all duration-150 cursor-pointer">
+        <div class="flex items-center justify-between gap-2"><span class="tag pill-met font-bold">3 / 3</span><span class="kicker text-right">WhatsApp flow</span></div>
+        <h4 class="serif font-bold text-2xl mt-3 leading-tight">Ankit Sherke</h4>
+        <p class="text-sm mt-2 font-medium">Name the target university to convert.</p>
+        <div class="mt-3 flex items-center gap-2 text-[11px] mono uppercase tracking-wider font-semibold">
+          <span>Open insights</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </div>
+      </button>
+      <button type="button" onclick="openModal('june-ashwin-susarla')" class="text-left chunk-sm p-5 bg-paper hover:-translate-y-1 hover:shadow-[5px_8px_0_0_var(--ink)] transition-all duration-150 cursor-pointer">
+        <div class="flex items-center justify-between gap-2"><span class="tag pill-met font-bold">8 / 8</span><span class="kicker text-right">Yocket premium</span></div>
+        <h4 class="serif font-bold text-2xl mt-3 leading-tight">Ashwin Susarla</h4>
+        <p class="text-sm mt-2 font-medium">Counselling quality is table stakes, not a differentiator.</p>
+        <div class="mt-3 flex items-center gap-2 text-[11px] mono uppercase tracking-wider font-semibold">
+          <span>Open insights</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </div>
+      </button>
+      <button type="button" onclick="openModal('june-asish-kumar-lenka')" class="text-left chunk-sm p-5 bg-paper hover:-translate-y-1 hover:shadow-[5px_8px_0_0_var(--ink)] transition-all duration-150 cursor-pointer">
+        <div class="flex items-center justify-between gap-2"><span class="tag bg-[color:var(--lime)] font-bold">5 / 3</span><span class="kicker text-right">counselling + shortlist</span></div>
+        <h4 class="serif font-bold text-2xl mt-3 leading-tight">Asish Kumar Lenka</h4>
+        <p class="text-sm mt-2 font-medium">Speed is trust.</p>
+        <div class="mt-3 flex items-center gap-2 text-[11px] mono uppercase tracking-wider font-semibold">
+          <span>Open insights</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </div>
+      </button>
+      <button type="button" onclick="openModal('june-bishal-mukherjee')" class="text-left chunk-sm p-5 bg-[color:var(--lime)] hover:-translate-y-1 hover:shadow-[5px_8px_0_0_var(--ink)] transition-all duration-150 cursor-pointer">
+        <div class="flex items-center justify-between gap-2"><span class="tag bg-[color:var(--lime)] font-bold">4 / 3</span><span class="kicker text-right">🏆 BU Winner</span></div>
+        <h4 class="serif font-bold text-2xl mt-3 leading-tight">Bishal Mukherjee</h4>
+        <p class="text-sm mt-2 font-medium">"A sanctioned loan does not guarantee a visa."</p>
+        <div class="mt-3 flex items-center gap-2 text-[11px] mono uppercase tracking-wider font-semibold">
+          <span>Open insights</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </div>
+      </button>
+      <button type="button" onclick="openModal('june-debashis-sahoo')" class="text-left chunk-sm p-5 bg-paper hover:-translate-y-1 hover:shadow-[5px_8px_0_0_var(--ink)] transition-all duration-150 cursor-pointer">
+        <div class="flex items-center justify-between gap-2"><span class="tag bg-[color:var(--lime)] font-bold">4 / 3</span><span class="kicker text-right">counselling + app</span></div>
+        <h4 class="serif font-bold text-2xl mt-3 leading-tight">Debashis Sahoo</h4>
+        <p class="text-sm mt-2 font-medium">The app actively misleads high-intent self-researchers.</p>
+        <div class="mt-3 flex items-center gap-2 text-[11px] mono uppercase tracking-wider font-semibold">
+          <span>Open insights</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </div>
+      </button>
+      <button type="button" onclick="openModal('june-divakaran-m')" class="text-left chunk-sm p-5 bg-paper hover:-translate-y-1 hover:shadow-[5px_8px_0_0_var(--ink)] transition-all duration-150 cursor-pointer">
+        <div class="flex items-center justify-between gap-2"><span class="tag bg-[color:var(--lime)] font-bold">4 / 3</span><span class="kicker text-right">10x flow</span></div>
+        <h4 class="serif font-bold text-2xl mt-3 leading-tight">Divakaran M</h4>
+        <p class="text-sm mt-2 font-medium">Ad expectation vs. counselling reality is the recurring friction.</p>
+        <div class="mt-3 flex items-center gap-2 text-[11px] mono uppercase tracking-wider font-semibold">
+          <span>Open insights</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </div>
+      </button>
+      <button type="button" onclick="openModal('june-heena-makhija')" class="text-left chunk-sm p-5 bg-paper hover:-translate-y-1 hover:shadow-[5px_8px_0_0_var(--ink)] transition-all duration-150 cursor-pointer">
+        <div class="flex items-center justify-between gap-2"><span class="tag pill-met font-bold">3 / 3</span><span class="kicker text-right">counselling</span></div>
+        <h4 class="serif font-bold text-2xl mt-3 leading-tight">Heena Makhija</h4>
+        <p class="text-sm mt-2 font-medium">Onboarding silently caps the market.</p>
+        <div class="mt-3 flex items-center gap-2 text-[11px] mono uppercase tracking-wider font-semibold">
+          <span>Open insights</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </div>
+      </button>
+      <button type="button" onclick="openModal('june-kashvi-gupta')" class="text-left chunk-sm p-5 bg-paper hover:-translate-y-1 hover:shadow-[5px_8px_0_0_var(--ink)] transition-all duration-150 cursor-pointer">
+        <div class="flex items-center justify-between gap-2"><span class="tag bg-[color:var(--lime)] font-bold">6 / 3</span><span class="kicker text-right">P2P platform</span></div>
+        <h4 class="serif font-bold text-2xl mt-3 leading-tight">Kashvi Gupta</h4>
+        <p class="text-sm mt-2 font-medium">Creator-led acquisition works; downstream mentor supply doesn't.</p>
+        <div class="mt-3 flex items-center gap-2 text-[11px] mono uppercase tracking-wider font-semibold">
+          <span>Open insights</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </div>
+      </button>
+      <button type="button" onclick="openModal('june-sehaj')" class="text-left chunk-sm p-5 bg-orange text-white hover:-translate-y-1 hover:shadow-[5px_8px_0_0_var(--ink)] transition-all duration-150 cursor-pointer">
+        <div class="flex items-center justify-between gap-2"><span class="tag font-bold" style="background:rgba(255,255,255,.95);color:var(--ink);border-color:var(--ink);">32 / 16</span><span class="kicker text-right">🏆 Overall Winner</span></div>
+        <h4 class="serif font-bold text-2xl mt-3 leading-tight">Sehaj</h4>
+        <p class="text-sm mt-2 font-medium">"Chat cannibalises LFF discovery."</p>
+        <div class="mt-3 flex items-center gap-2 text-[11px] mono uppercase tracking-wider font-semibold">
+          <span>Open insights</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </div>
+      </button>
+      <button type="button" onclick="openModal('june-siddhant-maruti')" class="text-left chunk-sm p-5 bg-paper hover:-translate-y-1 hover:shadow-[5px_8px_0_0_var(--ink)] transition-all duration-150 cursor-pointer">
+        <div class="flex items-center justify-between gap-2"><span class="tag bg-[color:var(--lime)] font-bold">4 / 3</span><span class="kicker text-right">counselling app</span></div>
+        <h4 class="serif font-bold text-2xl mt-3 leading-tight">Siddhant Maruti</h4>
+        <p class="text-sm mt-2 font-medium">College = job outcome for tech professionals.</p>
+        <div class="mt-3 flex items-center gap-2 text-[11px] mono uppercase tracking-wider font-semibold">
+          <span>Open insights</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </div>
+      </button>
+      <button type="button" onclick="openModal('june-subham-samal')" class="text-left chunk-sm p-5 bg-paper hover:-translate-y-1 hover:shadow-[5px_8px_0_0_var(--ink)] transition-all duration-150 cursor-pointer">
+        <div class="flex items-center justify-between gap-2"><span class="tag bg-[color:var(--lime)] font-bold">9 / 8</span><span class="kicker text-right">IELTS demo ops</span></div>
+        <h4 class="serif font-bold text-2xl mt-3 leading-tight">Subham Samal</h4>
+        <p class="text-sm mt-2 font-medium">The demo funnel is leaking on operations, not interest.</p>
+        <div class="mt-3 flex items-center gap-2 text-[11px] mono uppercase tracking-wider font-semibold">
+          <span>Open insights</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </div>
+      </button>
+      <button type="button" onclick="openModal('june-swapnil-agarwal')" class="text-left chunk-sm p-5 bg-paper hover:-translate-y-1 hover:shadow-[5px_8px_0_0_var(--ink)] transition-all duration-150 cursor-pointer">
+        <div class="flex items-center justify-between gap-2"><span class="tag pill-met font-bold">3 / 3</span><span class="kicker text-right">counselling ops + app</span></div>
+        <h4 class="serif font-bold text-2xl mt-3 leading-tight">Swapnil Agarwal</h4>
+        <p class="text-sm mt-2 font-medium">The promise-decay loop.</p>
+        <div class="mt-3 flex items-center gap-2 text-[11px] mono uppercase tracking-wider font-semibold">
+          <span>Open insights</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </div>
+      </button>
+      <button type="button" onclick="openModal('june-shruti-jain')" class="text-left chunk-sm p-5 bg-paper hover:-translate-y-1 hover:shadow-[5px_8px_0_0_var(--ink)] transition-all duration-150 cursor-pointer">
+        <div class="flex items-center justify-between gap-2"><span class="tag bg-[color:var(--lime)] font-bold">4 / 3</span><span class="kicker text-right">Shortlist Tool</span></div>
+        <h4 class="serif font-bold text-2xl mt-3 leading-tight">Shruti Jain</h4>
+        <p class="text-sm mt-2 font-medium">The Shortlist Tool returns no relevant universities for enrolled users.</p>
+        <div class="mt-3 flex items-center gap-2 text-[11px] mono uppercase tracking-wider font-semibold">
+          <span>Open insights</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </div>
+      </button>
+      <button type="button" onclick="openModal('june-vijay-chauhan')" class="text-left chunk-sm p-5 bg-[color:var(--lime)] hover:-translate-y-1 hover:shadow-[5px_8px_0_0_var(--ink)] transition-all duration-150 cursor-pointer">
+        <div class="flex items-center justify-between gap-2"><span class="tag pill-met font-bold">3 / 3</span><span class="kicker text-right">🏆 BU Winner</span></div>
+        <h4 class="serif font-bold text-2xl mt-3 leading-tight">Vijay Chauhan</h4>
+        <p class="text-sm mt-2 font-medium">Tutor continuity is the trust lever in premium SAT.</p>
+        <div class="mt-3 flex items-center gap-2 text-[11px] mono uppercase tracking-wider font-semibold">
+          <span>Open insights</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </div>
+      </button>
+      <button type="button" onclick="openModal('june-vishal-aashutosh')" class="text-left chunk-sm p-5 bg-[color:var(--indigo)] text-white hover:-translate-y-1 hover:shadow-[5px_8px_0_0_var(--ink)] transition-all duration-150 cursor-pointer">
+        <div class="flex items-center justify-between gap-2"><span class="tag font-bold" style="background:rgba(255,255,255,.95);color:var(--ink);border-color:var(--ink);">19 / 16</span><span class="kicker text-right">🥈 Runner-up</span></div>
+        <h4 class="serif font-bold text-2xl mt-3 leading-tight">Vishal & Aashutosh</h4>
+        <p class="text-sm mt-2 font-medium">"One implicit persona, silent failure for everyone else."</p>
+        <div class="mt-3 flex items-center gap-2 text-[11px] mono uppercase tracking-wider font-semibold">
+          <span>Open insights</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </div>
+      </button>
+    </div>
+  </div>
+</section>
+
+</div>
+<div class="month-block" data-month="may">
 <!-- ============ BU CHAMPIONS ============ -->
 <section id="bus" class="border-b-2 border-ink">
   <div class="max-w-[1280px] mx-auto px-6 py-20">
@@ -605,6 +1024,113 @@
   </div>
 </section>
 
+
+</div>
+<div class="month-block" data-month="june">
+<!-- ============ BU CHAMPIONS (JUNE) ============ -->
+<section id="bus-june" class="border-b-2 border-ink">
+  <div class="max-w-[1280px] mx-auto px-6 py-20">
+    <div class="flex items-end justify-between mb-10 flex-wrap gap-4">
+      <div>
+        <div class="kicker text-[color:var(--orange)]">Business Unit champions</div>
+        <h2 class="serif font-black text-5xl md:text-6xl mt-2 leading-none">One winner per BU.</h2>
+        <p class="mt-3 max-w-2xl">Four winners across four active BUs. GeeBee dark this cycle — zero submissions from both units.</p>
+      </div>
+      <div class="chunk-xs p-3 bg-cream text-xs mono uppercase tracking-wider font-bold">
+        <span class="text-[color:var(--orange)]">GeeBee</span> · 0 of 9 submitted
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-5">
+      <!-- Bishal · Yocket -->
+      <article class="chunk p-7 bg-[color:var(--lime)]">
+        <div class="flex items-start justify-between">
+          <div>
+            <span class="tag bg-paper">Yocket · Loans + Unisetu</span>
+            <h3 class="serif font-black text-4xl mt-3 leading-none">Bishal Mukherjee</h3>
+          </div>
+          <div class="text-right">
+            <div class="serif font-black text-4xl num">4<span class="text-ink/40">/3</span></div>
+            <div class="meta mt-1">interviews</div>
+          </div>
+        </div>
+        <p class="serif italic text-2xl leading-tight mt-5">"A sanctioned loan does not guarantee a visa."</p>
+        <div class="mt-5 grid grid-cols-2 gap-2.5 text-sm">
+          <div class="chunk-xs p-3.5 bg-paper"><span class="font-bold">Gaurav Jadaun</span> — visa rejected on PF despite sanctioned loan.</div>
+          <div class="chunk-xs p-3.5 bg-paper"><span class="font-bold">Satvika</span> — 30-60 min advance notice fixes a working-pro pain.</div>
+          <div class="chunk-xs p-3.5 bg-paper"><span class="font-bold">Shakshi</span> — re-conversion candidate, not a failure.</div>
+          <div class="chunk-xs p-3.5 bg-paper"><span class="font-bold">Unisetu CSP</span> — AI mock answers persist; Flywire undiscovered.</div>
+        </div>
+      </article>
+
+      <!-- Akash · LeapScholar -->
+      <article class="chunk p-7 bg-orange text-white">
+        <div class="flex items-start justify-between">
+          <div>
+            <span class="tag" style="border-color:#fff;color:#fff;">LeapScholar · Counselling</span>
+            <h3 class="serif font-black text-4xl mt-3 leading-none">Akash Wadhwa</h3>
+          </div>
+          <div class="text-right">
+            <div class="serif font-black text-4xl num">5<span class="opacity-50">/3</span></div>
+            <div class="meta mt-1" style="color:#fff;">interviews</div>
+          </div>
+        </div>
+        <p class="serif italic text-2xl leading-tight mt-5">"Churn is an integrity problem, not a quality one."</p>
+        <div class="mt-5 grid grid-cols-2 gap-2.5 text-sm text-[color:var(--ink)]">
+          <div class="chunk-xs p-3.5 bg-paper"><span class="font-bold">Niyati</span> — lost on broken promises, not bad advice.</div>
+          <div class="chunk-xs p-3.5 bg-paper"><span class="font-bold">Rishabh / Chevening</span> — counsellor unaware of return-clause.</div>
+          <div class="chunk-xs p-3.5 bg-paper"><span class="font-bold">Raghava</span> — pricing the explicit blocker, not value.</div>
+          <div class="chunk-xs p-3.5 bg-paper"><span class="font-bold">Nalin</span> — high rating, still destination-undecided.</div>
+        </div>
+      </article>
+
+      <!-- Vijay · Test Prep -->
+      <article class="chunk p-7 bg-[color:var(--indigo)] text-white">
+        <div class="flex items-start justify-between">
+          <div>
+            <span class="tag" style="border-color:#fff;color:#fff;">Test Prep · SAT / Premium</span>
+            <h3 class="serif font-black text-4xl mt-3 leading-none">Vijay Chauhan</h3>
+          </div>
+          <div class="text-right">
+            <div class="serif font-black text-4xl num">3<span class="opacity-50">/3</span></div>
+            <div class="meta mt-1" style="color:#fff;">interviews</div>
+          </div>
+        </div>
+        <p class="serif italic text-2xl leading-tight mt-5">"Tutor continuity is the trust lever in premium SAT."</p>
+        <div class="mt-5 grid grid-cols-2 gap-2.5 text-sm text-[color:var(--ink)]">
+          <div class="chunk-xs p-3.5 bg-paper"><span class="font-bold">Osama / Ahmed</span> — strong demo tutor, weaker assigned tutor breaks trust.</div>
+          <div class="chunk-xs p-3.5 bg-paper"><span class="font-bold">Farheen</span> — dependent-visa oversimplified at sale.</div>
+          <div class="chunk-xs p-3.5 bg-paper"><span class="font-bold">Samanvirtha</span> — opened up only in Kannada.</div>
+          <div class="chunk-xs p-3.5 bg-paper"><span class="font-bold">SOP/LOR drafts</span> — first-draft quality flagged poor.</div>
+        </div>
+      </article>
+
+      <!-- Sehaj · FO -->
+      <article class="chunk p-7 bg-cream">
+        <div class="flex items-start justify-between">
+          <div>
+            <span class="tag bg-paper">Founder's Office · LFF + Onboarding</span>
+            <h3 class="serif font-black text-4xl mt-3 leading-none">Sehaj</h3>
+          </div>
+          <div class="text-right">
+            <div class="serif font-black text-4xl num">32<span class="text-ink/40">/16</span></div>
+            <div class="meta mt-1">interviews</div>
+          </div>
+        </div>
+        <p class="serif italic text-2xl leading-tight mt-5">"Chat cannibalises LFF discovery."</p>
+        <div class="mt-5 grid grid-cols-2 gap-2.5 text-sm">
+          <div class="chunk-xs p-3.5 bg-paper"><span class="font-bold">Chanchal / Lakshay</span> — never found LFF, Chat already met needs.</div>
+          <div class="chunk-xs p-3.5 bg-paper"><span class="font-bold">Ramita</span> — skipped paid LFF report, CTA too early.</div>
+          <div class="chunk-xs p-3.5 bg-paper"><span class="font-bold">Rutuja</span> — IELTS-intent installs leaking into the funnel.</div>
+          <div class="chunk-xs p-3.5 bg-paper"><span class="font-bold">Madiha</span> — 7/10 tied directly to scholarship discoverability.</div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+</div>
+<div class="month-block" data-month="may">
 <!-- ============ OVERALL WINNER ============ -->
 <section id="winner" class="relative bg-ink text-[color:var(--paper)] overflow-hidden">
   <div class="blob bg-[color:var(--orange)]" style="width:600px;height:600px;left:-180px;bottom:-200px;opacity:.4;"></div>
@@ -725,6 +1251,128 @@
 
 <div class="stripe-hr"></div>
 
+
+</div>
+<div class="month-block" data-month="june">
+<!-- ============ OVERALL WINNER (JUNE) ============ -->
+<section id="winner-june" class="relative bg-ink text-[color:var(--paper)] overflow-hidden">
+  <div class="blob bg-[color:var(--orange)]" style="width:600px;height:600px;left:-180px;bottom:-200px;opacity:.4;"></div>
+  <div class="blob bg-[color:var(--indigo)]" style="width:520px;height:520px;right:-150px;top:-150px;opacity:.55;"></div>
+
+  <div class="relative max-w-[1280px] mx-auto px-6 py-20">
+    <div class="flex items-center gap-3 mb-6 flex-wrap">
+      <span class="tag" style="border-color:var(--paper); color:var(--paper);">🏆 Overall Winner · June 2026</span>
+      <span class="kicker" style="color:var(--paper);">Cycle 04 · Founder's Office</span>
+    </div>
+
+    <div class="grid md:grid-cols-12 gap-10 items-start">
+      <div class="md:col-span-5">
+        <div class="chunk bg-[color:var(--lime)] text-[color:var(--ink)] p-8 relative" style="box-shadow:8px 8px 0 0 var(--paper);">
+          <div class="flex items-start justify-between">
+            <div>
+              <div class="meta">Submitter</div>
+              <h2 class="serif font-black text-7xl md:text-8xl leading-none mt-2">Sehaj</h2>
+            </div>
+            <div class="text-right">
+              <div class="serif font-black text-5xl num">32<span class="text-ink/50">/16</span></div>
+              <div class="meta mt-1">interviews</div>
+            </div>
+          </div>
+          <div class="mt-6 flex flex-wrap gap-2">
+            <span class="tag bg-paper font-bold">App onboarding</span>
+            <span class="tag bg-paper font-bold">LFF</span>
+            <span class="tag bg-paper font-bold">Full intent spectrum</span>
+          </div>
+          <div class="mt-6 pt-6 border-t-2 border-dashed border-ink/40">
+            <div class="meta mb-2">The breakthrough</div>
+            <p class="serif italic text-2xl leading-snug font-semibold">"Chat cannibalises LFF discovery."</p>
+            <p class="text-sm mt-3 font-medium">Organic chat-first users (Chanchal, Lakshay) never discovered LFF — Chat + Explore already met their needs. LFF has a structural discoverability problem with its own most-engaged users.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="md:col-span-7">
+        <div class="kicker text-[color:var(--lime)] mb-3">Five insights that change the product</div>
+        <div class="space-y-3">
+          <div class="chunk-sm p-5 bg-[color:var(--paper)] text-[color:var(--ink)]">
+            <div class="flex items-start gap-4">
+              <span class="serif font-black text-3xl text-[color:var(--orange)] leading-none">01</span>
+              <div>
+                <div class="font-bold text-lg">Chat cannibalises LFF discovery.</div>
+                <p class="text-sm mt-1">Multiple organic chat-first users (Chanchal, Lakshay) never discovered LFF at all because Chat + Explore already met their needs.</p>
+              </div>
+            </div>
+          </div>
+          <div class="chunk-sm p-5 bg-[color:var(--paper)] text-[color:var(--ink)]">
+            <div class="flex items-start gap-4">
+              <span class="serif font-black text-3xl text-[color:var(--orange)] leading-none">02</span>
+              <div>
+                <div class="font-bold text-lg">The LFF report isn't standalone value.</div>
+                <p class="text-sm mt-1">Ramita skipped the report entirely — the counsellor CTA sits too prominent and too early, undercutting the paid artifact it's meant to convert.</p>
+              </div>
+            </div>
+          </div>
+          <div class="chunk-sm p-5 bg-[color:var(--paper)] text-[color:var(--ink)]">
+            <div class="flex items-start gap-4">
+              <span class="serif font-black text-3xl text-[color:var(--orange)] leading-none">03</span>
+              <div>
+                <div class="font-bold text-lg">App-store SEO leaks IELTS intent.</div>
+                <p class="text-sm mt-1">Rutuja downloaded Leap meaning to get an IELTS prep app. Recurring pattern across the month, not a one-off — wrong-intent installs entering the study-abroad funnel.</p>
+              </div>
+            </div>
+          </div>
+          <div class="chunk-sm p-5 bg-[color:var(--paper)] text-[color:var(--ink)]">
+            <div class="flex items-start gap-4">
+              <span class="serif font-black text-3xl text-[color:var(--orange)] leading-none">04</span>
+              <div>
+                <div class="font-bold text-lg">Scholarship discoverability caps the rating.</div>
+                <p class="text-sm mt-1">Madiha tied her 7/10 explicitly to not being able to find scholarships in-app. The blocker is surfacing, not absence.</p>
+              </div>
+            </div>
+          </div>
+          <div class="chunk-sm p-5 bg-[color:var(--paper)] text-[color:var(--ink)]">
+            <div class="flex items-start gap-4">
+              <span class="serif font-black text-3xl text-[color:var(--orange)] leading-none">05</span>
+              <div>
+                <div class="font-bold text-lg">Multi-course selection is missing.</div>
+                <p class="text-sm mt-1">Alroy (ready-to-apply) couldn't select multiple courses at once — a small missing primitive blocking the highest-intent users.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Runner up + Honourable -->
+    <div class="mt-14 grid md:grid-cols-2 gap-5">
+      <div class="chunk p-6 bg-[color:var(--indigo)] text-white">
+        <div class="flex items-center gap-3 mb-3 flex-wrap">
+          <span class="tag" style="border-color:#fff; color:#fff;">🥈 Runner-up</span>
+          <span class="kicker" style="color:rgba(255,255,255,.85);">Founder's Office</span>
+        </div>
+        <h3 class="serif font-black text-3xl">Vishal &amp; Aashutosh</h3>
+        <p class="text-sm mt-2">19 of 16 · 19 structured evaluations of the Navi career bot and Job Rec bot. The single most non-obvious thesis in the cycle: <span class="font-semibold">"One implicit persona, silent failure for everyone else."</span></p>
+        <div class="mt-4 chunk-xs p-4 bg-paper text-[color:var(--ink)]">
+          <p class="text-sm">Users already abroad (Daanish, Sakshi, Franto on UK student visas) get India-applicant assumptions, wrong visa paths, and ignored profile data. Chat Refine ignores rich profile the product already collected.</p>
+        </div>
+      </div>
+      <div class="chunk p-6 bg-orange text-white">
+        <div class="flex items-center gap-3 mb-3 flex-wrap">
+          <span class="tag" style="border-color:#fff; color:#fff;">🥉 Honourable Mention</span>
+          <span class="kicker" style="color:rgba(255,255,255,.9);">LeapScholar</span>
+        </div>
+        <h3 class="serif font-black text-3xl">Akash Wadhwa</h3>
+        <p class="text-sm mt-2">5 of 3 · the two sharpest individual findings of the cycle: <span class="font-semibold">"Churn on integrity, not quality"</span> and the Chevening expert-user knowledge gap.</p>
+        <div class="mt-4 chunk-xs p-4 bg-paper text-[color:var(--ink)]">
+          <p class="text-sm">Niyati left after repeated unmet "Friday/Saturday delivery" promises — <em>"didn't deliver on promises,"</em> never <em>"bad advice."</em> Accountability is the conversion lever, not advice quality.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+<div class="month-block" data-month="may">
 <!-- ============ MANIFESTO / CLOSING ============ -->
 <section class="bg-ink text-[color:var(--paper)] relative overflow-hidden">
   <div class="blob bg-[color:var(--lime)]" style="width:600px;height:600px;right:-200px;top:-200px;opacity:.25;"></div>
@@ -764,6 +1412,49 @@
   </div>
 </section>
 
+
+</div>
+<div class="month-block" data-month="june">
+<!-- ============ MANIFESTO / CLOSING (JUNE) ============ -->
+<section class="bg-ink text-[color:var(--paper)] relative overflow-hidden">
+  <div class="blob bg-[color:var(--lime)]" style="width:600px;height:600px;right:-200px;top:-200px;opacity:.25;"></div>
+  <div class="blob bg-[color:var(--orange)]" style="width:520px;height:520px;left:-150px;bottom:-150px;opacity:.25;"></div>
+  <div class="relative max-w-[1280px] mx-auto px-6 py-24 grid md:grid-cols-12 gap-10">
+    <div class="md:col-span-6">
+      <div class="kicker text-[color:var(--lime)]">The next four weeks</div>
+      <h2 class="serif font-black text-5xl md:text-7xl mt-3 leading-[0.95]">
+        Every. PM. <br/>
+        Every. <span class="text-[color:var(--orange)] italic">BD.</span><br/>
+        Every. <span class="text-[color:var(--lime)]">Engineer.</span>
+      </h2>
+      <p class="mt-6 text-lg max-w-lg">144 calls this month set the new floor, not the ceiling. GeeBee was dark — let's get them on the board. The next Show &amp; Tell lands in July.</p>
+    </div>
+    <div class="md:col-span-6 grid grid-cols-2 gap-4">
+      <div class="chunk p-6 bg-[color:var(--lime)] text-[color:var(--ink)]">
+        <div class="serif font-black text-5xl num">3+</div>
+        <div class="text-sm font-semibold mt-1">Calls per fortnight</div>
+        <p class="text-xs mt-2 font-medium">Minimum floor for every employee on the roster.</p>
+      </div>
+      <div class="chunk p-6 bg-[color:var(--paper)] text-[color:var(--ink)]">
+        <div class="serif font-black text-5xl num">100%</div>
+        <div class="text-sm font-semibold mt-1">Recorded &amp; transcripted</div>
+        <p class="text-xs mt-2 font-medium">Granola, Otter, whatever — receipts or it didn't happen.</p>
+      </div>
+      <div class="chunk p-6 bg-orange text-white">
+        <div class="serif font-black text-5xl num">1</div>
+        <div class="text-sm font-semibold mt-1">Synthesis per submitter</div>
+        <p class="text-xs mt-2 font-medium">Cross-call themes, not a list of complaints.</p>
+      </div>
+      <div class="chunk p-6 bg-[color:var(--indigo)] text-white">
+        <div class="serif font-black text-5xl num">Jul</div>
+        <div class="text-sm font-semibold mt-1">Cycle 05 ships</div>
+        <p class="text-xs mt-2 font-medium">July 2026 · same ritual, new receipts.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
 <!-- ============ FOOTER ============ -->
 <footer class="bg-ink text-[color:var(--paper)]">
   <div class="max-w-[1280px] mx-auto px-6 py-10 flex flex-wrap items-center justify-between gap-6">
@@ -793,7 +1484,7 @@
 </div>
 
 <script>
-  const PEOPLE = {"abhishek-m": {"name": "Abhishek M", "bu": "Founder's Office", "count": "4 / 3", "thesis": "Ad-targeting vs landing-page intent mismatch", "bullets": [["Sanmita", "Remembered the booking page but didn't book \"for no actual reason.\" The page produces zero friction and zero pull — nothing makes her feel she'd lose something by leaving."], ["Mohit", "High-intent dropout from a network-interrupted counsellor call. The counsellor never called back. Process gap, not product gap. Fix: auto-callback messaging + counsellor-initiated WhatsApp follow-up."], ["Bhumi", "Was searching for IELTS but signed up on the counselling page by mistake — she has a partner in Canada. Ad-targeting and landing-page intent contradict each other."], ["Daraksha", "Wants Dubai with \"no specific reason.\" Needs a path, not a menu. The app hands her course listings; she needs direction."]]}, "anirudh-amudan": {"name": "Anirudh Amudan", "bu": "LeapScholar · Airo", "count": "9 / 8", "thesis": "Stage-by-stage Airo drop-off RCA", "bullets": [["Teaser-page dropout", "Two users (Athita, Divya) didn't realise the form generates an AI call that produces the shortlist. Pure copy problem — already fixed in BAU."], ["Geronica", "Explicitly wants a human counsellor, not AI. Reframe Airo as \"preparation for your counsellor\" rather than a standalone agent."], ["Diwakar", "Got through most of the call but UI didn't register end-call. Pacing fixable in script; broken end-state damages trust."], ["Priyansh", "Call worked; report failed (low-QS universities, no fees). Drop-off moved from call layer to report layer — ranking calibration is next."], ["Chat preference", "Sanskruti and Payal independently said they'd prefer chat over voice. Recurring signal, warrants a formal product decision."]]}, "anuj-garg": {"name": "Anuj Garg", "bu": "GeeBee · Unisetu", "count": "4 / 3", "thesis": "Sharpest product-and-process synthesis across 4 power-user interviews", "bullets": [["Khushbu", "Rated Unisetu ABOVE ApplyBoard on features and ease of use. Positive competitive narrative the field team can lean into."], ["WhatsApp is the work", "Khushbu, Dheeraj, and the Canada ops team all said WhatsApp is where the real work happens — document handoffs, status comms, inter-team coordination. Platform is system of record; WhatsApp is system of work."], ["Uni Bestie / ZeroGPT", "Dheeraj uses Claude + ZeroGPT + Undetectable.ai to produce SOPs that pass AI detection. Faster than the in-portal SOP feature. Compliance flag worth raising."], ["Pooja Karalkar's team", "Processes ~50% of daily Canada applications (~20 of 40) because submissions allow missing passport/contact details. Making fields mandatory is a one-line policy fix with revenue impact."]]}, "aratrika-roy": {"name": "Aratrika Roy", "bu": "GeeBee · Unisetu", "count": "3 / 3", "thesis": "Operational users want basics fixed before novelty", "bullets": [["Safleen", "Email notifications broke 2-3 months ago — she preferred fixing notifications over a mobile app. Clarifying signal about what operational users actually need."], ["Application-fee waiver", "Safleen explicitly moved applications to competitor portals when GB showed fees and competitor showed a waiver. Concrete, recoverable."], ["Javika", "AI mock interview rated as the standout feature — \"highly valuable and impactful.\" A real differentiator the field doesn't talk about enough."], ["Acentrik team", "Multiple users unaware Info Hub, deadline tracker, scholarship finder, video guides exist. Discoverability gap is as costly as the missing features themselves."]]}, "ashita-jain": {"name": "Ashita Jain", "bu": "GeeBee · 🏆 BU Winner", "count": "3 / 3", "thesis": "\"Commission Parity Overrides Product Quality.\"", "bullets": [["Muralikrishna's commission math", "GB offers 18.5% on Greenwich; KAC offers 22.5% plus volume bonuses at 50-60 enrolments/year. Same product, 4% delta routes the deal."], ["Data accuracy is a trust crisis", "All 3 CSPs cross-check GB's data with KAC or university websites. Two found discrepancies (deadlines, intake status). Reframe: stop the credibility erosion."], ["Loan-university compatibility", "8 of 10 students depend on loans. Some universities aren't accepted by major providers (Avance, Auxilla). Surfacing this at offer stage moves offer-to-payment conversion."], ["Venugopal's USA Health PG search", "Returned Master of MBA Finance / MBA Healthcare Management when he wanted health PG. Search-relevance failure at the moment of intent."], ["Omprakash positive", "\"The platform asks only essential student info.\" Rare positive worth amplifying — most CSPs complain about over-asking."]]}, "ashwin-susarla": {"name": "Ashwin Susarla", "bu": "Founder's Office · 🏆 Overall Winner", "count": "9 / 8", "thesis": "\"Topmate works precisely because it stays out of the way.\"", "bullets": [["1:1 exclusivity is the product", "Anushree's student left a session early to dodge the LS rep at the end — \"looked like an advertisement.\" Two mentors independently confirmed students share less (CGPA, finances) with a host present."], ["Mentor-as-referral", "Ananya was sent Ayushi's booking link directly. The platform facilitated the connection but never owned the discovery."], ["Cultural affinity matching", "Rizana picked Reema specifically — both Malayali, Reema a Chevening winner. Match by lived identity, not destination or skill."], ["Post-admit segment", "Avinandita had a Birmingham offer and needed accommodation, part-time work, SOP guidance. LS serves none of that today."], ["UG is Google-Sheet-first", "Archana runs 48 students grades 8-12 entirely on Sheets — 60 tasks/year per Grade 10, planned quarterly. Any UG dashboard that doesn't mirror this fails adoption."]]}, "heena-makhija": {"name": "Heena Makhija", "bu": "LeapScholar · 🏆 BU Winner", "count": "3 / 3", "thesis": "\"Individual counsellors are the entire product.\"", "bullets": [["Named counsellors everywhere", "Bharat and Sharat named repeatedly. Charvi praised unprompted for German teaching. Every conversion was attributed to a human, not a feature."], ["All 3 families cross-check", "Vasantha, Kevin, Ram families independently run shortlists through ChatGPT or Google. That's not due diligence — it's a trust gap. Share the reasoning, not the sorted list."], ["Kashish inconsistency", "Same counsellor, opposite student experiences: Ram very positive, Kevin needed rescuing by Harish. Student-dependent behaviour or genuinely inconsistent — needs a managerial audit."], ["IELTS → Germany funnel", "Vasantha's son entered LS via IELTS prep, converted to Germany counselling. The IELTS-to-Germany playbook is replicable as BAU."], ["12 public universities promise", "Ram chose LS over Yes Germany and Uni Scholar specifically for public-university coverage. If the final shortlist contains private universities, trust collapses immediately."]]}, "param-thakkar": {"name": "Param Thakkar", "bu": "Founder's Office · 🥈 Runner-up", "count": "8 / 8", "thesis": "\"The app isn't built for Stage 1.\"", "bullets": [["App not built for Stage 1", "Across 8 calls only 1-2 users had made the go/no-go decision. The product flow assumes the decision is made. Stage 1 users need a case for going abroad, not a list of courses."], ["Family conversation gap", "Kaustubh: \"I can't just go and say ki bahar padhne jaana hai.\" Users need an ROI argument — total cost, expected salary, loan EMI, break-even — packaged for parents."], ["Content gaps fail high-intent users", "Faiz had country (France) and course (MiM) decided. Both shortlist/explore AND Arya returned zero results. Filter-relaxation doesn't help if the catalogue is empty."], ["Friend referrals ≠ intent", "Aniket downloaded the app on a friend's recommendation — for English practice. Activation metrics on referral users like him are misleading."], ["Two hard bugs from Ashish", "Shortlist persistence failure (generate → lock phone → return to empty state). Counsellor-shortlisted courses not visible in the user's app. Bug 1 was fixed post-call."]]}, "sehaj-bajaj": {"name": "Sehaj Bajaj", "bu": "Founder's Office", "count": "10 / 8", "thesis": "10 conversations with the sharpest catalogue insights of the cycle", "bullets": [["Josh on search credibility", "Saw the same courses in Explore but got zero results in Shortlist for identical filters. Attributed it to \"a defective search engine\" — far more damaging than a true empty state."], ["Gautham on Germany", "Shortlist returned only private universities; tuition displayed as full annual rather than semester contribution. Misrepresents the German study-abroad landscape entirely."], ["Sanchita on positioning", "MIT-aspirant got nothing on LOR, SOP, extracurricular strategy. Course discovery is solved; admissions positioning is a complete gap for the high-value segment."], ["Vikas on Chat-as-Home", "Arrived via Google ad with shortlist intent; Chat-as-Home was confusing. Acquisition-to-activation leak — search-ad traffic likely has higher shortlist intent than the architecture assumes."], ["Madiha on scholarship", "For her segment, scholarship isn't a \"nice to have\" — it's the binary decision factor. The app shows tuition without scholarship overlay = an incomplete picture."]]}, "shiksha-mishra": {"name": "Shiksha Mishra", "bu": "Founder's Office · Career Bot", "count": "8 / 8", "thesis": "Most rigorous bug-level product testing of the cycle", "bullets": [["Resume parsing failures", "Ayush's 3-year role logged as 1y 2m. Namit's college positions tagged as full-time work. Old internships prioritised over current roles. Foundational error compounding downstream."], ["Unexplained CTC cap", "Anush wanted 45 LPA, system capped at 26 LPA without explanation. Same frustration with Ayush, Namit until the moderator clarified market-standard. Cap is fine; silence is not."], ["Seniority mismatches", "Pranav (mid-level switcher) got Lead/Senior roles. Sarthak (10-15+ yrs) had no senior filters. Namit selected \"fresher\" but got jobs needing 6-12 yrs experience."], ["Salary band inconsistencies", "Director of Operations suggested with unrealistically low band. Inputted ₹10-12.5L expected CTC but job portal showed ₹2-3L roles."], ["Namit positioning insight", "\"Better than raw LLMs\" — preferred this platform over Claude because it avoids hallucination. The Career Bot wins by being grounded, not smarter. Worth defending and instrumenting."]]}};
+  const PEOPLE = {"abhishek-m": {"name": "Abhishek M", "bu": "Founder's Office", "count": "4 / 3", "thesis": "Ad-targeting vs landing-page intent mismatch", "bullets": [["Sanmita", "Remembered the booking page but didn't book \"for no actual reason.\" The page produces zero friction and zero pull — nothing makes her feel she'd lose something by leaving."], ["Mohit", "High-intent dropout from a network-interrupted counsellor call. The counsellor never called back. Process gap, not product gap. Fix: auto-callback messaging + counsellor-initiated WhatsApp follow-up."], ["Bhumi", "Was searching for IELTS but signed up on the counselling page by mistake — she has a partner in Canada. Ad-targeting and landing-page intent contradict each other."], ["Daraksha", "Wants Dubai with \"no specific reason.\" Needs a path, not a menu. The app hands her course listings; she needs direction."]]}, "anirudh-amudan": {"name": "Anirudh Amudan", "bu": "LeapScholar · Airo", "count": "9 / 8", "thesis": "Stage-by-stage Airo drop-off RCA", "bullets": [["Teaser-page dropout", "Two users (Athita, Divya) didn't realise the form generates an AI call that produces the shortlist. Pure copy problem — already fixed in BAU."], ["Geronica", "Explicitly wants a human counsellor, not AI. Reframe Airo as \"preparation for your counsellor\" rather than a standalone agent."], ["Diwakar", "Got through most of the call but UI didn't register end-call. Pacing fixable in script; broken end-state damages trust."], ["Priyansh", "Call worked; report failed (low-QS universities, no fees). Drop-off moved from call layer to report layer — ranking calibration is next."], ["Chat preference", "Sanskruti and Payal independently said they'd prefer chat over voice. Recurring signal, warrants a formal product decision."]]}, "anuj-garg": {"name": "Anuj Garg", "bu": "GeeBee · Unisetu", "count": "4 / 3", "thesis": "Sharpest product-and-process synthesis across 4 power-user interviews", "bullets": [["Khushbu", "Rated Unisetu ABOVE ApplyBoard on features and ease of use. Positive competitive narrative the field team can lean into."], ["WhatsApp is the work", "Khushbu, Dheeraj, and the Canada ops team all said WhatsApp is where the real work happens — document handoffs, status comms, inter-team coordination. Platform is system of record; WhatsApp is system of work."], ["Uni Bestie / ZeroGPT", "Dheeraj uses Claude + ZeroGPT + Undetectable.ai to produce SOPs that pass AI detection. Faster than the in-portal SOP feature. Compliance flag worth raising."], ["Pooja Karalkar's team", "Processes ~50% of daily Canada applications (~20 of 40) because submissions allow missing passport/contact details. Making fields mandatory is a one-line policy fix with revenue impact."]]}, "aratrika-roy": {"name": "Aratrika Roy", "bu": "GeeBee · Unisetu", "count": "3 / 3", "thesis": "Operational users want basics fixed before novelty", "bullets": [["Safleen", "Email notifications broke 2-3 months ago — she preferred fixing notifications over a mobile app. Clarifying signal about what operational users actually need."], ["Application-fee waiver", "Safleen explicitly moved applications to competitor portals when GB showed fees and competitor showed a waiver. Concrete, recoverable."], ["Javika", "AI mock interview rated as the standout feature — \"highly valuable and impactful.\" A real differentiator the field doesn't talk about enough."], ["Acentrik team", "Multiple users unaware Info Hub, deadline tracker, scholarship finder, video guides exist. Discoverability gap is as costly as the missing features themselves."]]}, "ashita-jain": {"name": "Ashita Jain", "bu": "GeeBee · 🏆 BU Winner", "count": "3 / 3", "thesis": "\"Commission Parity Overrides Product Quality.\"", "bullets": [["Muralikrishna's commission math", "GB offers 18.5% on Greenwich; KAC offers 22.5% plus volume bonuses at 50-60 enrolments/year. Same product, 4% delta routes the deal."], ["Data accuracy is a trust crisis", "All 3 CSPs cross-check GB's data with KAC or university websites. Two found discrepancies (deadlines, intake status). Reframe: stop the credibility erosion."], ["Loan-university compatibility", "8 of 10 students depend on loans. Some universities aren't accepted by major providers (Avance, Auxilla). Surfacing this at offer stage moves offer-to-payment conversion."], ["Venugopal's USA Health PG search", "Returned Master of MBA Finance / MBA Healthcare Management when he wanted health PG. Search-relevance failure at the moment of intent."], ["Omprakash positive", "\"The platform asks only essential student info.\" Rare positive worth amplifying — most CSPs complain about over-asking."]]}, "ashwin-susarla": {"name": "Ashwin Susarla", "bu": "Founder's Office · 🏆 Overall Winner", "count": "9 / 8", "thesis": "\"Topmate works precisely because it stays out of the way.\"", "bullets": [["1:1 exclusivity is the product", "Anushree's student left a session early to dodge the LS rep at the end — \"looked like an advertisement.\" Two mentors independently confirmed students share less (CGPA, finances) with a host present."], ["Mentor-as-referral", "Ananya was sent Ayushi's booking link directly. The platform facilitated the connection but never owned the discovery."], ["Cultural affinity matching", "Rizana picked Reema specifically — both Malayali, Reema a Chevening winner. Match by lived identity, not destination or skill."], ["Post-admit segment", "Avinandita had a Birmingham offer and needed accommodation, part-time work, SOP guidance. LS serves none of that today."], ["UG is Google-Sheet-first", "Archana runs 48 students grades 8-12 entirely on Sheets — 60 tasks/year per Grade 10, planned quarterly. Any UG dashboard that doesn't mirror this fails adoption."]]}, "heena-makhija": {"name": "Heena Makhija", "bu": "LeapScholar · 🏆 BU Winner", "count": "3 / 3", "thesis": "\"Individual counsellors are the entire product.\"", "bullets": [["Named counsellors everywhere", "Bharat and Sharat named repeatedly. Charvi praised unprompted for German teaching. Every conversion was attributed to a human, not a feature."], ["All 3 families cross-check", "Vasantha, Kevin, Ram families independently run shortlists through ChatGPT or Google. That's not due diligence — it's a trust gap. Share the reasoning, not the sorted list."], ["Kashish inconsistency", "Same counsellor, opposite student experiences: Ram very positive, Kevin needed rescuing by Harish. Student-dependent behaviour or genuinely inconsistent — needs a managerial audit."], ["IELTS → Germany funnel", "Vasantha's son entered LS via IELTS prep, converted to Germany counselling. The IELTS-to-Germany playbook is replicable as BAU."], ["12 public universities promise", "Ram chose LS over Yes Germany and Uni Scholar specifically for public-university coverage. If the final shortlist contains private universities, trust collapses immediately."]]}, "param-thakkar": {"name": "Param Thakkar", "bu": "Founder's Office · 🥈 Runner-up", "count": "8 / 8", "thesis": "\"The app isn't built for Stage 1.\"", "bullets": [["App not built for Stage 1", "Across 8 calls only 1-2 users had made the go/no-go decision. The product flow assumes the decision is made. Stage 1 users need a case for going abroad, not a list of courses."], ["Family conversation gap", "Kaustubh: \"I can't just go and say ki bahar padhne jaana hai.\" Users need an ROI argument — total cost, expected salary, loan EMI, break-even — packaged for parents."], ["Content gaps fail high-intent users", "Faiz had country (France) and course (MiM) decided. Both shortlist/explore AND Arya returned zero results. Filter-relaxation doesn't help if the catalogue is empty."], ["Friend referrals ≠ intent", "Aniket downloaded the app on a friend's recommendation — for English practice. Activation metrics on referral users like him are misleading."], ["Two hard bugs from Ashish", "Shortlist persistence failure (generate → lock phone → return to empty state). Counsellor-shortlisted courses not visible in the user's app. Bug 1 was fixed post-call."]]}, "sehaj-bajaj": {"name": "Sehaj Bajaj", "bu": "Founder's Office", "count": "10 / 8", "thesis": "10 conversations with the sharpest catalogue insights of the cycle", "bullets": [["Josh on search credibility", "Saw the same courses in Explore but got zero results in Shortlist for identical filters. Attributed it to \"a defective search engine\" — far more damaging than a true empty state."], ["Gautham on Germany", "Shortlist returned only private universities; tuition displayed as full annual rather than semester contribution. Misrepresents the German study-abroad landscape entirely."], ["Sanchita on positioning", "MIT-aspirant got nothing on LOR, SOP, extracurricular strategy. Course discovery is solved; admissions positioning is a complete gap for the high-value segment."], ["Vikas on Chat-as-Home", "Arrived via Google ad with shortlist intent; Chat-as-Home was confusing. Acquisition-to-activation leak — search-ad traffic likely has higher shortlist intent than the architecture assumes."], ["Madiha on scholarship", "For her segment, scholarship isn't a \"nice to have\" — it's the binary decision factor. The app shows tuition without scholarship overlay = an incomplete picture."]]}, "shiksha-mishra": {"name": "Shiksha Mishra", "bu": "Founder's Office · Career Bot", "count": "8 / 8", "thesis": "Most rigorous bug-level product testing of the cycle", "bullets": [["Resume parsing failures", "Ayush's 3-year role logged as 1y 2m. Namit's college positions tagged as full-time work. Old internships prioritised over current roles. Foundational error compounding downstream."], ["Unexplained CTC cap", "Anush wanted 45 LPA, system capped at 26 LPA without explanation. Same frustration with Ayush, Namit until the moderator clarified market-standard. Cap is fine; silence is not."], ["Seniority mismatches", "Pranav (mid-level switcher) got Lead/Senior roles. Sarthak (10-15+ yrs) had no senior filters. Namit selected \"fresher\" but got jobs needing 6-12 yrs experience."], ["Salary band inconsistencies", "Director of Operations suggested with unrealistically low band. Inputted ₹10-12.5L expected CTC but job portal showed ₹2-3L roles."], ["Namit positioning insight", "\"Better than raw LLMs\" — preferred this platform over Claude because it avoids hallucination. The Career Bot wins by being grounded, not smarter. Worth defending and instrumenting."]]}, "june-akash-wadhwa": {"name": "Akash Wadhwa", "bu": "LeapScholar · 🏆 BU Winner", "count": "5 / 3", "thesis": "\"Churn is an integrity problem, not a quality one.\"", "bullets": [["Niyati (BDS/NHS dentist)", "Paid user lost after repeated Friday/Saturday delivery promises went unmet — \"didn't deliver on promises,\" never \"bad advice.\" Accountability tracking is non-existent; manager escalation failed."], ["Rishabh / Chevening", "Counsellor unaware of the mandatory return-to-home-country clause. A cybersecurity professional with 6 yrs experience caught it. Expert users break trust faster than novices."], ["Raghava", "Highly motivated; pricing was the explicit blocker. Satisfaction doesn't convert above budget."], ["Nalin", "8.5–9/10 rating while still undecided across Canada/Germany/Australia. Early-stage scores measure politeness, not progress."], ["Cross-call pattern", "High satisfaction co-exists with unresolved structural risk in 4 of 5 calls. The rating misses the diagnosis."]]}, "june-ankit-sherke": {"name": "Ankit Sherke", "bu": "LeapScholar · WhatsApp flow", "count": "3 / 3", "thesis": "Name the target university to convert.", "bullets": [["Vasu → Coventry", "Users who arrive with a specific university already in mind convert better when that university appears in their shortlist. Personalisation by named intent."], ["Roshan & Kunal", "WA flow is pulling early-stage, under-documented users — no clarity on process, documents, or eligibility. Fine for experimentation; at scale, route to a booked meeting + follow-up."], ["Roshan (already in Indian MBA)", "Wanted a direct comparison of India-vs-abroad MBA. Both a user need and a Meta-ad creative angle."]]}, "june-ashwin-susarla": {"name": "Ashwin Susarla", "bu": "Founder's Office · Yocket premium", "count": "8 / 8", "thesis": "Counselling quality is table stakes, not a differentiator.", "bullets": [["WhatsApp group mistiming", "Group auto-creates at payment, before the agreement is signed — confuses parents. Move trigger to post-agreement."], ["Omkar on documents", "No preview of uploaded docs, no delete-and-re-upload. Concrete UX gap with no workaround."], ["Roshni's chat bug", "Pasting content hits a character limit and breaks; no calling/Zoom integration in-platform."], ["Hirday", "Rated counselling strong but said competitors were comparable. The unmet need is unbiased peer perspective, not better counsellors."], ["Mentor side (Krishna, Madhumita, Reema)", "Want DM automation and structured outreach. Generic AI-sounding outreach gets ignored — authenticity is the bottleneck."]]}, "june-asish-kumar-lenka": {"name": "Asish Kumar Lenka", "bu": "LeapScholar · counselling + shortlist", "count": "5 / 3", "thesis": "Speed is trust.", "bullets": [["Vanshaj", "Wanted Europe; the shortlist was majority UAE. The shortlist ignores stated destination outright."], ["Ashwin (user, USA research-focused)", "No shortlist after 10 days and no RM contact — high-intent users disengage fast when execution is slow."], ["Harini (positive control)", "Her satisfaction came entirely from strong follow-up and ownership — working professionals value \"someone keeping them on track.\""], ["Pavan (10-yr supply chain, MBA)", "Recommendations felt too generic — experienced professionals need specialised matching, not the default flow."]]}, "june-bishal-mukherjee": {"name": "Bishal Mukherjee", "bu": "Yocket · 🏆 BU Winner", "count": "4 / 3", "thesis": "\"A sanctioned loan does not guarantee a visa.\"", "bullets": [["Gaurav Jadaun", "Visa rejected on Proof of Funds despite a sanctioned loan — the sanctioned amount, format, and liquidity profile didn't match consulate requirements. A pre-visa PF adequacy check would catch this class of failure."], ["Satvika", "Working at Amazon — only ask was 30–60 min advance notice before bank/formality calls. Low-effort process fix, high satisfaction impact."], ["Shakshi", "Excellent experience; left for family reasons. Likely re-converter — flag for re-engagement, don't log as failure."], ["Unisetu Platinum CSP (Mission Education)", "AI mock-interview answers persist across retries (improvement can't be measured). Flywire link generation is undiscovered. Power-user goldmine."]]}, "june-debashis-sahoo": {"name": "Debashis Sahoo", "bu": "LeapScholar · counselling + app", "count": "4 / 3", "thesis": "The app actively misleads high-intent self-researchers.", "bullets": [["sandeep yadav", "The app showed wrong fees while he was researching independently — actively misleading a high-intent user at the moment of evaluation."], ["Pranit", "Counsellor WhatsApp group was silent; follow-up inconsistent despite a strong first call."], ["AI/ML research-founder (ID 237076)", "Generic, enrolment-focused engagement for a niche profile. Senior escalation existed but was ineffective."], ["venkannababu", "Scholar student from a farming family — hadn't received the Germany ISL or counselling. Delivery gap on a high-need profile."]]}, "june-divakaran-m": {"name": "Divakaran M", "bu": "LeapScholar · 10x flow", "count": "4 / 3", "thesis": "Ad expectation vs. counselling reality is the recurring friction.", "bullets": [["Nish Arora", "Came in expecting one thing from the ad and got a different counselling experience — a mismatch worth closing at the ad-creative level."], ["Jay Patil & Hariharasudhan", "Shortlists came back below the ranking/reputation bar MBA aspirants expect."], ["Shivam Sharma", "Counselling stayed narrow on UK options without broadening to fit his actual profile."]]}, "june-heena-makhija": {"name": "Heena Makhija", "bu": "LeapScholar · counselling", "count": "3 / 3", "thesis": "Onboarding silently caps the market.", "bullets": [["Mithra (PhD aspirant)", "Destination field is single-select Germany-only — she registered Germany simply because it was the only option, masking real multi-country intent. A market-capping form bug."], ["Hazel Christina", "Completed the full sales cycle, paid a downpayment, then exited at commitment. Pre-enrolment conviction check is missing."], ["Tejas (quantum physics)", "Reference case — senior counsellor ran daily follow-ups and proactive SOP coordination. The clearest \"what good looks like\" in the cohort."]]}, "june-kashvi-gupta": {"name": "Kashvi Gupta", "bu": "Founder's Office · P2P platform", "count": "6 / 3", "thesis": "Creator-led acquisition works; downstream mentor supply doesn't.", "bullets": [["Ananya", "Couldn't get clear information on how the European Credit Transfer System affects her eligibility. ECTS confusion blocks European Masters intent."], ["Vanshita & Vidya (biotech)", "Both wanted industry/business-side options beyond research — non-lab biotech career guidance is a content gap."], ["Shreya (high-intent UG)", "Struggled to connect with NUS/NTU students. Singapore UG mentor scarcity blocks a high-value lead."], ["Naveen (Supreme Court advocate, LLM)", "Wanted pre-arrival living tips and SMU scholarship specifics — not eligibility help. Senior users still need practical, post-eligibility guidance."]]}, "june-sehaj": {"name": "Sehaj", "bu": "Founder's Office · 🏆 Overall Winner", "count": "32 / 16", "thesis": "\"Chat cannibalises LFF discovery.\"", "bullets": [["Chanchal & Lakshay", "Organic chat-first users never discovered LFF at all — Chat + Explore already met their needs. LFF has a structural discoverability problem with its own most-engaged users."], ["Ramita on the LFF report", "Skipped the report entirely because the counsellor CTA sits too prominent and too early. The paid artifact is being undercut by the very CTA meant to convert it."], ["Rutuja (and the pattern)", "Downloaded Leap meaning to get an IELTS prep app. App-store SEO is leaking IELTS-intent installs into the study-abroad funnel — recurring, not a one-off."], ["Madiha's 7/10", "Tied explicitly to not being able to find scholarships in-app. Scholarship section discoverability directly caps the rating."], ["Alroy (ready-to-apply)", "Couldn't select multiple courses at once. Multi-course selection is a missing primitive blocking high-intent users."]]}, "june-siddhant-maruti": {"name": "Siddhant Maruti", "bu": "LeapScholar · counselling app", "count": "4 / 3", "thesis": "College = job outcome for tech professionals.", "bullets": [["Tech-pro shortlists", "Outcome-oriented users equate college with job outcome and can't act on a shortlist that lacks job-outcome context."], ["Decision-owner expectations", "Low-process-awareness users want the counsellor to OWN the decision, not facilitate it. A delay made a paid user miss college deadlines."], ["Chetan", "Didn't understand how the shortlist was built or what came next — plan-validity communication is missing."], ["Rama krishna", "Stayed pessimistic on visa/ROI because conviction was never built — clarity gaps post-shortlist."]]}, "june-subham-samal": {"name": "Subham Samal", "bu": "Founder's Office · IELTS demo ops", "count": "9 / 8", "thesis": "The demo funnel is leaking on operations, not interest.", "bullets": [["Dr Sneha", "Booked a next-day slot and never got a reminder. Multiple users in the cohort with the same complaint."], ["Azam / Romana / Moushumi", "Rescheduling broken or undiscoverable — reschedule link missing, flow not smooth."], ["Mohammed Mustafa", "Attended but was marked absent. Attendance tracking is wrong at the data layer."], ["Aryan & Ishika", "Waited 30–60 min and nobody admitted them. The waiting-room is broken at the operational seam."], ["Manisha", "Didn't know what she'd get from the demo. Value isn't communicated pre-call."]]}, "june-swapnil-agarwal": {"name": "Swapnil Agarwal", "bu": "LeapScholar · counselling ops + app", "count": "3 / 3", "thesis": "The promise-decay loop.", "bullets": [["Anmol (Bikaner) — verbatim Hinglish", "\"Mera IELTS ka exam bhi schedule karwana tha Pooja ke through. Woh bhi ab tak…\" — a committed handoff undelivered the next day. The most quotable line in the cycle."], ["Shilpa (Bengaluru)", "Waited for an ISL deliverable that had already shipped in-app — she didn't know it was there. Delivered ≠ received: a pure discoverability failure."], ["Harsh (final-year BTech)", "Got a wrong-country shortlist AND 3 days of silence after flagging it. Rated 4/10 before any correction landed."]]}, "june-shruti-jain": {"name": "Shruti Jain", "bu": "LeapScholar · Shortlist Tool", "count": "4 / 3", "thesis": "The Shortlist Tool returns no relevant universities for enrolled users.", "bullets": [["Nikhil & Arpita", "Enrolled Liy users couldn't find relevant universities at all in the Shortlist Tool — a tool-level failure for the audience it's meant for."], ["Ansh", "Wanted Australia — named coverage gap."], ["R Krishnamurthi", "Wanted Germany and Japan — destinations the tool didn't serve well. Coverage holes recur across users."]]}, "june-vijay-chauhan": {"name": "Vijay Chauhan", "bu": "Test Prep · 🏆 BU Winner", "count": "3 / 3", "thesis": "Tutor continuity is the trust lever in premium SAT.", "bullets": [["Osama (parent of Ahmed, SAT-MENA)", "A strong Math demo tutor followed by a weaker assigned tutor breaks parent trust in an outcome-focused premium program. Tutor-continuity gap, not a curriculum gap."], ["Farheen (Germany ELITE)", "Dependent/spouse visa was sold as simple but is complex on residence-permit grounds. SOP/LOR first-draft quality was poor."], ["Samanvirtha (Germany Premium)", "Opened up only once Bharat explained in Kannada — regional-language comfort is a trust trigger that unlocks the conversation."]]}, "june-vishal-aashutosh": {"name": "Vishal & Aashutosh", "bu": "Founder's Office · 🥈 Runner-up", "count": "19 / 16", "thesis": "\"One implicit persona, silent failure for everyone else.\"", "bullets": [["Daanish, Sakshi, Franto (UK student visas)", "Users already abroad get India-applicant assumptions, the wrong visa paths, and ignored profile data. The product assumes you're applying from India."], ["Haresh & Shreyas", "Asked specific, answerable questions (Birmingham MSc + Accenture background) and got generic 70-percentile responses. Chat Refine is disconnected from profile data the product already has."], ["Kaustubh (biomedical/MedTech R&D)", "Got zero listings. The job engine doesn't cover research/academic profiles at all — coverage holes are field-shaped."], ["Supriya (\"Is it too late at 4 years?\")", "Free-text emotional career question got a generic motivational reply instead of a real answer."], ["Reliability bugs", "Vaidik's session state wasn't saved; Shivang got zero jobs on first try (likely API failure) then correct jobs on retry."]]}};
   function openModal(slug){
     const p = PEOPLE[slug];
     if(!p) return;
@@ -829,6 +1520,34 @@
     document.body.style.overflow = '';
   }
   document.addEventListener('keydown', e => { if(e.key === 'Escape') closeModal(); });
+</script>
+
+
+<script>
+(function(){
+  const TOP_STRIP_TEXT = { may: { cycle: 'Cycle 03', date: '15 May 2026' }, june: { cycle: 'Cycle 04', date: '12 Jun 2026' } };
+  function switchMonth(month){
+    document.querySelectorAll('[data-month]').forEach(el => {
+      if(el.getAttribute('data-month') === month) el.removeAttribute('hidden');
+      else el.setAttribute('hidden', '');
+    });
+    document.querySelectorAll('.tab-pill').forEach(p => {
+      p.setAttribute('aria-selected', p.getAttribute('data-tab') === month ? 'true' : 'false');
+    });
+    const ts = TOP_STRIP_TEXT[month];
+    document.querySelectorAll('[data-cycle-text]').forEach(el => el.textContent = ts.cycle);
+    document.querySelectorAll('[data-date-text]').forEach(el => el.textContent = ts.date);
+    if(history && history.replaceState) history.replaceState(null, '', '#' + month);
+    window.scrollTo({ top: 0, behavior: 'instant' in window ? 'instant' : 'auto' });
+  }
+  window.switchMonth = switchMonth;
+  document.addEventListener('DOMContentLoaded', () => {
+    const hash = (location.hash || '').replace('#','').toLowerCase();
+    const initial = (hash === 'may' || hash === 'june') ? hash : 'june';
+    switchMonth(initial);
+    window.scrollTo({ top: 0 });
+  });
+})();
 </script>
 
 </body>
